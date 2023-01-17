@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Александр Абрамкин](https://up.htmlacademy.ru/htmlcss/36/user/146767).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Котов](https://htmlacademy.ru/profile/evgeniy_kotov).
 
 ---
 
