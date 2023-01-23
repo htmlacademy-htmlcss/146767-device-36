@@ -6,8 +6,7 @@
   </head>
   <body>
 
-    <!-- "Шапка" сайта -->
-    <header class="index-header">
+    <header class="header-index">
 
       <img class="logo navigation-logo" src="#" alt="device">
 
@@ -51,6 +50,64 @@
       </nav>
 
     </header>
+
+    <main class="main-index">
+
+      <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
+
+      <!-- Слайдер -->
+      <section class="main-slider">
+        <h2 class="visually-hidden">Акции и популярные товары</h2>
+
+        <!-- Слайды с описанием -->
+        <img class="slider-image" src="#" alt="Изображение квадрокоптера">
+        <div class="wrapper-slider-text">
+          <h3 class="slider-heading">Порхает как бабочка, жалит как пчела!</h3>
+          <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+          <a class="slider-text-link" href="#">Подробнее</a>
+          <span class="slider-text-feature"><em>800 м</em> Дальность полёта</span>
+          <span class="slider-text-feature"><em>50 м</em> Радиус поражения</span>
+        </div>
+
+        <!-- Кнопки переключения слайдов вперёд и назад -->
+        <button class="slider-button slider-prev" type="button">
+          <span class="visually-hidden">
+            Предыдущее фото
+          </span>
+        </button>
+        <button class="slider-button slider-next" type="button">
+          <span class="visually-hidden">
+            Следующее фото
+          </span>
+        </button>
+
+        <!-- Нумерация слайдов -->
+        <ol class="slider-pagination">
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button slider-pagination-button-current" type="button">
+              <span class="visually-hidden">
+                1 фото
+              </span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">
+                2 фото
+              </span>
+            </button>
+          </li>
+          <li class="slider-pagination-item">
+            <button class="slider-pagination-button" type="button">
+              <span class="visually-hidden">
+                3 фото
+              </span>
+            </button>
+          </li>
+        </ol>
+      </section>
+
+    </main>
 
   </body>
 </html>
