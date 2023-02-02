@@ -9,7 +9,7 @@
     <header class="header-index">
 
       <a class="header-logo-link" href="index.html" title="На главную страницу">
-        <img class="logo navigation-logo" src="#" alt="device">
+        <img class="logo navigation-logo" src="images/header-index-logo.svg" width="145" height="36" alt="device.">
       </a>
 
       <!-- Форма поиска по сайту -->
@@ -62,6 +62,7 @@
         <h1 class="visually-hidden">Список товаров с фильтрами</h1>
         <strong class="main-inner-title">Моноподы для селфи</strong>
 
+        <!-- Навигация "Хлебные крошки" -->
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="index.html" title="Перейти на Главную страницу">Главная</a>
@@ -79,13 +80,19 @@
         <h2 class="catalog-filter-title">Фильтр:</h2>
 
         <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
-          <div class="rangeslider">
-            <input class="range-value-min" name="range-1" type="range" min="0" max="10000" value="0">
-            <input class="range-value-max" name="range-1" type="range" min="0" max="10000" value="5000">
-            <span class="range-min left">от 0</span>
-            <span class="range-max right">до 5000</span>
-          </div>
 
+          <!-- Ползунок стоимости -->
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Стоимость</legend>
+            <div class="rangeslider">
+              <input class="range-value-min" name="range-1" type="range" min="0" max="10000" value="0">
+              <input class="range-value-max" name="range-1" type="range" min="0" max="10000" value="5000">
+              <span class="range-min left">от 0</span>
+              <span class="range-max right">до 5000</span>
+            </div>
+          </fieldset>
+
+          <!-- Фильтр по цвету -->
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Цвет</legend>
             <ul class="catalog-filter-list">
@@ -122,6 +129,7 @@
             </ul>
           </fieldset>
 
+          <!-- Доп. фильтр по характеристике товара -->
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Bluetooth</legend>
             <ul class="catalog-filter-list">
@@ -144,6 +152,7 @@
           </form>
         </section>
 
+        <!-- Сортировка товара (популярные, дешёвые, дорогие) по возрастанию/убыванию -->
         <section class="wrapper-catalog-select">
           <h2 class="catalog-select-title">Сортировка:</h2>
           <select class="select-control" aria-label="Сортировка">
@@ -157,33 +166,34 @@
           </div>
         </section>
 
+        <!-- Карточки товара -->
         <section class="catalog-product">
           <h2 class="visually-hidden">Каталог товаров</h2>
           <ul class="product-list">
             <li class="product-card">
               <a class="product-card-link" href="#" title="Перейти на страницу карточки товара">
-                <img class="product-card-image" src="#" alt="селфи-палка с тонкой ручкой и простой системой креплений">
+                <img class="product-card-image" src="images/catalog-product-image-1.jpg" width="360" height="380" alt="селфи-палка с тонкой ручкой и простой системой креплений.">
                 <h3 class="product-card-title">Любительская селфи-палка</h3>
                 <b class="product-card-price">500 ₽</b>
               </a>
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#" title="Перейти на страницу карточки товара">
-                <img class="product-card-image" src="#" alt="селфи-палка с утолщенной ручкой и дополнительными крепежами">
+                <img class="product-card-image" src="images/catalog-product-image-2.jpg" width="360" height="380" alt="селфи-палка с утолщенной ручкой и дополнительными крепежами.">
                 <h3 class="product-card-title">Профессиональная селфи-палка</h3>
                 <b class="product-card-price">1500 ₽</b>
               </a>
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#" title="Перейти на страницу карточки товара">
-                <img class="product-card-image" src="#" alt="селфи-палка с прорезиненой ручкой и специальным боксом для смартфона">
+                <img class="product-card-image" src="images/catalog-product-image-3.jpg" width="360" height="380" alt="селфи-палка с прорезиненой ручкой и специальным боксом для смартфона.">
                 <h3 class="product-card-title">Непотопляемая селфи-палка</h3>
                 <b class="product-card-price">2500 ₽</b>
               </a>
             </li>
             <li class="product-card">
               <a class="product-card-link" href="#" title="Перейти на страницу карточки товара">
-                <img class="product-card-image" src="#" alt="криповатая селфи-палка рука для ваших ночных кошмаров">
+                <img class="product-card-image" src="images/catalog-product-image-4.jpg" width="360" height="380" alt="криповатая селфи-палка рука для ваших ночных кошмаров.">
                 <h3 class="product-card-title">Селфи-палка "Следуй за мной"</h3>
                 <b class="product-card-price">1500 ₽</b>
               </a>
@@ -192,6 +202,7 @@
           <button class="button button-preloading" type="button">Загрузить ещё</button>
       </section>
 
+      <!-- Нумерация страниц -->
       <section class="pagination">
         <h2 class="visually-hidden">Нумерация страниц</h2>
         <ul class="pagination-list">
@@ -229,7 +240,7 @@
       <h2 class="visually-hidden">Краткая информация о компании</h2>
 
       <a class="footer-link-logo" href="index.html" title="На главную страницу">
-        <img class="footer-img-logo" src="#" alt="Логотип компании 'device'">
+        <img class="footer-img-logo" src="images/footer-index-logo.svg" width="145" height="36" alt="Логотип компании 'device'.">
       </a>
 
       <h3 class="visually-hidden">Адрес компании</h3>
@@ -252,26 +263,29 @@
       <ul class="footer-list footer-social">
         <li class="footer-item">
           <a class="footer-link" href="#" title="Мы в Telegram">
-            <img class="footer-icon" src="#" alt="Telegram">
+            <span class="social-text-hidden">Мы в Telegram</span>
+            <img class="footer-icon" src="images/footer-social-icon-telegram.svg" width="14" height="12" alt="Telegram.">
           </a>
         </li>
         <li class="footer-item">
           <a class="footer-link" href="#" title="Канал на YouTobe">
-            <img class="footer-icon" src="#" alt="YouTobe">
+            <span class="social-text-hidden">Канал на YouTube</span>
+            <img class="footer-icon" src="images/footer-social-icon-youtube.svg" width="16" height="11" alt="YouTube.">
           </a>
         </li>
         <li class="footer-item">
           <a class="footer-link" href="#" title="Мы в twitter">
-            <img class="footer-icon" src="#" alt="twitter">
+            <span class="social-text-hidden">Мы в twitter</span>
+            <img class="footer-icon" src="images/footer-social-icon-twitter.svg" width="15" height="14" alt="twitter.">
           </a>
         </li>
       </ul>
 
       <h3 class="visually-hidden">Телефон для связи</h3>
-      <a class="footer-link" href="tel:+7(812)812-12-12" title="Позвонить">Тел.:7(812)812-12-12</a>
+      <a class="footer-link" href="tel:+78128121212" title="Позвонить">Тел.:7(812)812-12-12</a>
 
       <a class="footer-link-logo" href="https://htmlacademy.ru" title="На сайт html academy">
-        <img class="footer-img-logo img-logo-dev" src="#" alt="Логотип компании '.html academy'">
+        <img class="footer-img-logo img-logo-dev" src="images/footer-index-logo-developer.svg" width="115" height="33" alt="Логотип компании '.html academy'.">
       </a>
 
     </footer>
