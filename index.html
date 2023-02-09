@@ -159,25 +159,28 @@
         <h2 class="visually-hidden">Услуги</h2>
 
         <!-- Аккордеон (один активный блок, содержание остальных блоков скрыто) -->
-        <ul class="accordion-list">
+        <div class="wrapper-services">
+          <ul class="accordion-list">
 
-          <li class="accordion-item">
-            <button class="accordion-button" type="button">Доставка</button>
-            <div class="wrapper-accordion-description">
-              <h3 class="accordion-description-title">Доставка</h3>
-              <p class="accordion-description-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </div>
+            <li class="accordion-item accordion-item-active">
+              <button class="accordion-button accordion-button-active" type="button">Доставка</button>
+            </li>
+
+            <li class="accordion-item">
+              <button class="accordion-button" type="button">Гарантия</button>
+            </li>
+
+            <li class="accordion-item">
+              <button class="accordion-button" type="button">Кредит</button>
+            </li>
+          </ul>
+
+          <div class="wrapper-accordion-description">
+            <h3 class="accordion-description-title">Доставка</h3>
+            <p class="accordion-description-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             <img class="accordion-item-image" src="images/services-image-courier.svg" width="136" height="164" alt="Бегущий курьер.">
-          </li>
-
-          <li class="accordion-item">
-            <button class="accordion-button" type="button">Гарантия</button>
-          </li>
-
-          <li class="accordion-item">
-            <button class="accordion-button" type="button">Кредит</button>
-          </li>
-        </ul>
+          </div>
+        </div>
 
         <!-- Информационный блок-ссылка -->
         <a class="services-link" href="#" title="Узнать подробности">
