@@ -1,0 +1,487 @@
+/* Глобальные стили */
+
+/* Шрифты */
+
+/* Raleway */
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* Rubik */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+
+  margin: 0;
+}
+
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} */
+
+/* Локальные стили */
+
+/* Навигация */
+.header-index {
+  background-color: #FFE17F;
+}
+
+.area-search-form,
+.button-search-form
+{
+  font-family: 'Rubik', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.area-search-form::placeholder {
+  opacity: 0.3;
+}
+
+.account-item,
+.navigation-item
+{
+  list-style-type: none;
+}
+
+.account-link {
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navigation-link {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* Слайдер */
+.slider-heading {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.slider-text {
+  font-style: normal;
+}
+
+.slider-text-link {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.slider-text-feature,
+.slider-text-feature em
+{
+  font-style: normal;
+  font-size: 36px;
+  line-height: 30px;
+}
+
+.slider-text-feature {
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* Карточки по категориям */
+.product-categories-item{
+  list-style-type: none;
+}
+
+.product-categories-img {
+  background-color: #FFE17F;
+}
+
+.product-categories-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.product-categories-title {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+}
+
+/* Аккордеон */
+.wrapper-services {
+  background-color: #F0F0F0;
+}
+
+.accordion-button {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.accordion-button-active {
+  color: #FFE17F;
+}
+
+.accordion-item {
+  list-style-type: none;
+}
+
+.accordion-item-active {
+  background-color: #000000;
+}
+
+.accordion-description-title {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.accordion-description-text {
+  font-style: normal;
+}
+
+/* Информационный блок-ссылка */
+.services-link {
+  text-decoration: none;
+  color: #000000;
+  background-color: #F0F0F0;
+}
+
+.services-info-block {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* О нас, Контакты */
+.subscription {
+  background: #F0F0F0;
+}
+
+.about-us-title,
+.contacts-title
+{
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.about-us-item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.about-us-list {
+  list-style-type: none;
+}
+
+.about-us-item {
+  position: relative;
+}
+
+.about-us-item::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFC700;
+  left: -26px;
+  top: 6px;
+}
+
+.contacts-caption {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #444444;
+}
+
+.about-us-link,
+.contacts-link,
+.subscription-button,
+.footer-link,
+.catalog-filter-button
+{
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.about-us-link,
+.contacts-link,
+.footer-link
+{
+  text-decoration: none;
+}
+
+.contacts-telephone-link,
+.contacts-term,
+.contacts-definition
+{
+  font-style: normal;
+  color: #444444;
+}
+
+/* Форма для оформления подписки */
+.subscription-text-strong {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.subscription-input {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.subscription-input::placeholder {
+  opacity: 0.5;
+}
+
+/* "Подвал" */
+.footer-index {
+  background-color: #444444;
+  color: #FFFFFF;
+}
+
+.footer-text {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.footer-item {
+  list-style-type: none;
+}
+
+.footer-link {
+  color: #FFFFFF;
+}
+
+.footer-telephone-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+
+
+/* catalog.html */
+.main-inner-title {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+/* Навигация "Хлебные крошки" */
+.breadcrumbs-item {
+  list-style-type: none;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Секция с фильтрами */
+.wrapper-catalog-filter,
+.wrapper-catalog-select
+{
+  background-color: #F0F0F0;
+}
+
+.catalog-select-title
+{
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.select-control {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  border: none;
+}
+
+.catalog-filter-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.catalog-filter-item {
+  font-size: 16px;
+  line-height: 20px;
+  list-style-type: none;
+}
+
+/* Карточки товара */
+.product-card-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.product-card {
+  list-style-type: none;
+}
+
+.product-card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.product-card-price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #444444;
+}
+
+.button-preloading {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0);
+  border: 3px solid #E5E5E5;
+}
+
+/* Нумерация страниц */
+.pagination {
+  background-color: #EBEBEB;
+}
+
+.pagination-item {
+  list-style-type: none;
+}
+
+.pagination-button-left,
+.pagination-button-right
+{
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.pagination-link,
+.pagination-prev,
+.pagination-next
+{
+  color: #000000;
+  text-decoration: none;
+}
+
+.pagination-link {
+  font-size: 16px;
+  line-height: 20px;
+  color: #444444;
+  opacity: 0.3;
+}
+
+.pagination-current {
+  opacity: 0.6;
+}
+
+.pagination-disabled {
+  color: #444444;
+  opacity: 0.3;
+}
