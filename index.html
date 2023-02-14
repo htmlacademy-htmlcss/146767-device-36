@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
 
@@ -158,25 +159,28 @@
         <h2 class="visually-hidden">Услуги</h2>
 
         <!-- Аккордеон (один активный блок, содержание остальных блоков скрыто) -->
-        <ul class="accordion-list">
+        <div class="wrapper-services">
+          <ul class="accordion-list">
 
-          <li class="accordion-item">
-            <button class="accordion-button" type="button">Доставка</button>
-            <div class="wrapper-accordion-description">
-              <h3 class="accordion-description-title">Доставка</h3>
-              <p class="accordion-description-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-            </div>
+            <li class="accordion-item accordion-item-active">
+              <button class="accordion-button accordion-button-active" type="button">Доставка</button>
+            </li>
+
+            <li class="accordion-item">
+              <button class="accordion-button" type="button">Гарантия</button>
+            </li>
+
+            <li class="accordion-item">
+              <button class="accordion-button" type="button">Кредит</button>
+            </li>
+          </ul>
+
+          <div class="wrapper-accordion-description">
+            <h3 class="accordion-description-title">Доставка</h3>
+            <p class="accordion-description-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
             <img class="accordion-item-image" src="images/services-image-courier.svg" width="136" height="164" alt="Бегущий курьер.">
-          </li>
-
-          <li class="accordion-item">
-            <button class="accordion-button" type="button">Гарантия</button>
-          </li>
-
-          <li class="accordion-item">
-            <button class="accordion-button" type="button">Кредит</button>
-          </li>
-        </ul>
+          </div>
+        </div>
 
         <!-- Информационный блок-ссылка -->
         <a class="services-link" href="#" title="Узнать подробности">
@@ -189,7 +193,7 @@
         <h2 class="about-us-title">О нас</h2>
         <p class="about-us-text">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p class="about-us-text">Мы можем доставить ваш товар в самые отдалённые уголки России транспортными компаниями:</p>
-        <h3 class="about-us-title visually-hidden">Список транспортных компаний</h3>
+        <h3 class="visually-hidden">Список транспортных компаний</h3>
         <ul class="about-us-list">
           <li class="about-us-item">Меловые линии</li>
           <li class="about-us-item">СДИК</li>
@@ -202,12 +206,12 @@
       <section class="contacts">
         <h2 class="contacts-title">Контакты</h2>
         <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис. Заодно сможете проверить работоспособность покупки.</p>
-        <h3 class="contacts-title">Адрес компании</h3>
-        <b class="contacts-title">Интернет-магазин "Девайс"</b>
+        <h3 class="visually-hidden">Адрес компании</h3>
+        <b class="contacts-caption">Интернет-магазин "Девайс"</b>
         <p class="contacts-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
-        <h3 class="contacts-title visually-hidden">Телефон для связи</h3>
-        <a class="contacts-link" href="tel:+78128121212" title="Позвонить">+7(812)812-12-12</a>
-        <h3 class="contacts-title">Время работы</h3>
+        <h3 class="visually-hidden">Телефон для связи</h3>
+        <a class="contacts-telephone-link" href="tel:+78128121212" title="Позвонить">+7(812)812-12-12</a>
+        <h3 class="contacts-caption">Время работы</h3>
         <dl class="contacts-list">
           <dt class="contacts-term">пн-пт:</dt>
           <dd class="contacts-definition">с 10:00 до 22:00</dd>
@@ -281,7 +285,7 @@
       </ul>
 
       <h3 class="visually-hidden">Телефон для связи</h3>
-      <a class="footer-link" href="tel:+78128121212" title="Позвонить">Тел.:7(812)812-12-12</a>
+      <a class="footer-telephone-link" href="tel:+78128121212" title="Позвонить">Тел.:7(812)812-12-12</a>
 
       <a class="footer-link-logo" href="https://htmlacademy.ru" title="На сайт html academy">
         <img class="footer-img-logo img-logo-dev" src="images/footer-index-logo-developer.svg" width="115" height="33" alt="Логотип компании '.html academy'.">
