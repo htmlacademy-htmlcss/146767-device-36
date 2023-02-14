@@ -29,18 +29,28 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
   color: #000000;
-
   margin: 0;
 }
 
-/* .visually-hidden {
+.main-container {
+  flex-grow: 1;
+}
+
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -51,13 +61,69 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 /* Локальные стили */
 
 /* Навигация */
 .header-index {
   background-color: #FFE17F;
+}
+
+.wrapper-header {
+  width: 1160px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.navigation-logo {
+  position: relative;
+  top: -20px;
+}
+
+.wrapper-header-line-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper-search-form {
+  display: flex;
+  position: relative;
+  margin-right: 53px;
+}
+
+.wrapper-search-form::before {
+  position: absolute;
+  content: " ";
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/header-index-icon-search.svg);
+  background-repeat: no-repeat;
+  top: 12px;
+  left: 16px;
+}
+
+.area-search-form {
+  width: 359px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-right: none;
+  background: none;
+  padding-left: 48px;
+}
+
+.button-search-form {
+  width: 160px;
+  height: 40px;
+  border: 2px solid #000000;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background: none;
 }
 
 .area-search-form,
@@ -74,10 +140,33 @@ body {
   opacity: 0.3;
 }
 
+.account-list {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding: 0;
+}
+
+.account-item {
+
+}
+
 .account-item,
 .navigation-item
 {
   list-style-type: none;
+}
+
+.account-item-enter {
+  margin-right: auto;
+}
+
+.account-item-compare {
+  margin-right: 61px;
+}
+
+.account-item-basket {
+
 }
 
 .account-link {
