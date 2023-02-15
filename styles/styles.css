@@ -70,12 +70,15 @@ body {
   background-color: #FFE17F;
 }
 
-.wrapper-header {
+.wrapper-header,
+.main-slider
+{
   width: 1160px;
   margin: 0 auto;
+}
+
+.wrapper-header {
   margin-top: 40px;
-  padding-left: 60px;
-  padding-right: 60px;
 }
 
 .navigation-logo {
@@ -89,6 +92,14 @@ body {
   align-items: center;
   height: 40px;
   margin-bottom: 30px;
+}
+
+.navigation-logo,
+.wrapper-header-line-top,
+.navigation
+{
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .wrapper-search-form {
@@ -273,16 +284,31 @@ body {
 }
 
 /* Слайдер */
+.wrapper-slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
 .slider-heading {
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+  margin-bottom: 29px;
 }
 
 .slider-text {
   font-style: normal;
+  margin: 0;
+  margin-bottom: 50px;
+}
+
+.wrapper-slider-right-column {
+  width: 560px;
 }
 
 .slider-text-link {
