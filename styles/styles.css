@@ -87,6 +87,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 40px;
+  margin-bottom: 30px;
 }
 
 .wrapper-search-form {
@@ -140,15 +142,47 @@ body {
   opacity: 0.3;
 }
 
-.account-list {
+.navigation-list {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.account-list,
+.navigation-list
+{
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   flex-grow: 1;
   padding: 0;
 }
 
-.account-item {
+.account-item-enter,
+.account-item-basket
+{
+  position: relative;
+}
 
+.account-item-enter::before {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 12px;
+  background-image: url(../images/header-index-icon-login.svg);
+  background-repeat: no-repeat;
+  top: 9px;
+  left: -26px;
+}
+
+.account-item-basket::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 14px;
+  background-image: url(../images/header-index-icon-basket.svg);
+  background-repeat: no-repeat;
+  top: 7px;
+  left: -28px;
 }
 
 .account-item,
@@ -157,16 +191,67 @@ body {
   list-style-type: none;
 }
 
-.account-item-enter {
+.navigation-item-catalog {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-item-button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  padding: 0;
+  margin-left: 20px;
+  opacity: 0.3;background: none;
+}
+
+.navigation-item-button::before  {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+  top: 15px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../images/header-index-icon-unroll.svg);
+  background-repeat: no-repeat;
+}
+
+.account-item-enter,
+.account-item-exit,
+.navigation-item-catalog
+{
   margin-right: auto;
 }
 
+.account-item-exit {
+  opacity: 0.3;
+}
+
 .account-item-compare {
+  position: relative;
   margin-right: 61px;
 }
 
-.account-item-basket {
+.account-item-compare::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 12px;
+  background-image: url(../images/header-index-icon-comparison.svg);
+  background-repeat: no-repeat;
+  top: 7px;
+  left: -20px;
+}
 
+.navigation-item-delivery,
+.navigation-item-warranty
+{
+  margin-right: 45px;
 }
 
 .account-link {
