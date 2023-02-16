@@ -71,7 +71,8 @@ body {
 }
 
 .wrapper-header,
-.main-slider
+.main-slider,
+.product-categories
 {
   width: 1160px;
   margin: 0 auto;
@@ -284,6 +285,10 @@ body {
 }
 
 /* Слайдер */
+.main-slider {
+  position: relative;
+}
+
 .wrapper-slider {
   display: flex;
   flex-wrap: wrap;
@@ -312,6 +317,11 @@ body {
 }
 
 .slider-text-link {
+  position: relative;
+  display: block;
+  margin-bottom: 60px;
+  width: 220px;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -321,6 +331,17 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+}
+
+.slider-text-link-box::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 220px;
+  height: 8px;
+  top: 6px;
+  background: #FFE17F;
+  z-index: -1;
 }
 
 .slider-text-feature,
@@ -334,14 +355,89 @@ body {
 .slider-text-feature {
   font-size: 16px;
   line-height: 30px;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.wrapper-slider-button {
+  position: absolute;
+  width: 560px;
+  top: 30%;
+}
+
+.slider-button {
+  width: 20px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.slider-prev {
+  position: absolute;
+  left: 30px;
+  background-image: url(../images/slider-button-prev.svg);
+  background-repeat: no-repeat;
+}
+
+.slider-next {
+  position: absolute;
+  right: 0;
+  background-image: url(../images/slider-button-next.svg);
+  background-repeat: no-repeat;
+}
+
+.slider-pagination {
+  padding: 0;
+  text-align: center;
+  font-size: 0;
+  margin-bottom: 70px;
+}
+
+.slider-pagination-item {
+  display: inline-block;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+.slider-pagination-item:last-child {
+  margin-right: 0;
+}
+
+.slider-pagination-button {
+  display: block;
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  background: none;
+}
+
+.slider-pagination-button-current {
+  background-color: #000000;
 }
 
 /* Карточки по категориям */
+.product-categories-list {
+  display: flex;
+  flex-wrap: nowrap;
+	justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 70px;
+}
+
 .product-categories-item{
   list-style-type: none;
+  width: 160px;
+}
+
+.product-categories-link {
+  display: block;
 }
 
 .product-categories-img {
+  margin-bottom: 33px;
   background-color: #FFE17F;
 }
 
@@ -351,6 +447,8 @@ body {
 }
 
 .product-categories-title {
+  display: block;
+  margin: 0;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
