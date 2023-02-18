@@ -75,7 +75,9 @@ body {
 .product-categories,
 .wrapper-services,
 .info-block,
-.wrapper-about-us-contacts
+.wrapper-about-us-contacts,
+.wrapper-subscription,
+.wrapper-footer-index
 {
   width: 1160px;
   margin: 0 auto;
@@ -818,6 +820,27 @@ body {
 }
 
 /* Форма для оформления подписки */
+.wrapper-subscription {
+  padding-top: 64px;
+  padding-bottom: 56px;
+}
+
+.wrapper-column-subscription {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 144px;
+}
+
+.column-subscription-left,
+.column-subscription-right
+{
+  width: 520px;
+}
+
+.subscription-text {
+  margin: 10px 0;
+}
+
 .subscription-text-strong {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -826,16 +849,50 @@ body {
   line-height: 50px;
 }
 
+.subscription-form {
+  display: flex;
+  align-items: center;
+}
+
 .subscription-input {
   font-family: "Rubik", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
+  width: 557px;
+  height: 52px;
+  border: none;
+  border-bottom: 3px solid #C4C4C4;
+  background: none;
+  padding-left: 16px;
 }
 
 .subscription-input::placeholder {
   opacity: 0.5;
+}
+
+.subscription-button {
+  width: 253px;
+  height: 57px;
+  padding: 0;
+  border: 3px solid #C4C4C4;
+}
+
+.subscription-form-text {
+  position: relative;
+  margin-left: auto;
+}
+
+.subscription-form-text::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  top: 8px;
+  left: -32px;
+  background-image: url(../images/subscription-icon-tick.svg);
+  background-repeat: no-repeat;
 }
 
 /* "Подвал" */
@@ -844,23 +901,120 @@ body {
   color: #FFFFFF;
 }
 
+.wrapper-footer-index {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-index-column-left {
+  position: relative;
+  width: 240px;
+  margin-top: 62px;
+}
+
+.footer-index-column-left::before {
+  position: absolute;
+  content: "";
+  width: 80px;
+  height: 7px;
+  top: 182px;
+  background: #FFC700;
+}
+
+.footer-index-column-central {
+  width: 444px;
+  margin-top: 137px;
+}
+
+.footer-index-column-right {
+  width: 240px;
+  margin-top: 140px;
+  text-align: right;
+}
+
+.footer-link-logo {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
 .footer-text {
   font-size: 16px;
   line-height: 20px;
+  margin: 0;
+}
+
+.footer-list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav {
+  justify-content: space-between;
+  margin-bottom: 62px;
+}
+
+.footer-social {
+  justify-content: center;
+  margin-bottom: 61px;
 }
 
 .footer-item {
-  list-style-type: none;
+  margin-right: 15px;
+}
+
+.footer-item:last-child {
+  margin-right: 0;
 }
 
 .footer-link {
+  text-decoration: none;
   color: #FFFFFF;
 }
 
+.footer-social-link {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.footer-icon-telegram::before  {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/footer-social-icon-telegram.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.footer-icon-youtube {
+  background-image: url(../images/footer-social-icon-youtube.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.footer-icon-twitter {
+  background-image: url(../images/footer-social-icon-twitter.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
 .footer-telephone-link {
+  display: block;
+  margin-bottom: 63px;
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+}
+
+.footer-link-logo {
+  display: block;
+  margin-bottom: 65px;
 }
 
 
