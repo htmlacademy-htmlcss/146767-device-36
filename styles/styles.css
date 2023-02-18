@@ -1,3 +1,7 @@
+/* ################### */
+/* ##  index.html   ## */
+/* ################### */
+
 /* Глобальные стили */
 
 /* Шрифты */
@@ -1017,19 +1021,56 @@ body {
   margin-bottom: 65px;
 }
 
+/* ################### */
+/* ## catalog.html  ## */
+/* ################### */
+.inner-header {
+  width: 1160px;
+  margin: 0 auto;
+}
 
-/* catalog.html */
 .main-inner-title {
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+  margin-top: 35px;
+  margin-left: 60px;
+  margin-bottom: 16px;
 }
 
 /* Навигация "Хлебные крошки" */
+.breadcrumbs {
+  padding: 0;
+  margin: 0;
+  margin-left: 60px;
+  margin-bottom: 34px;
+}
+
 .breadcrumbs-item {
+  position: relative;
+  display: inline;
   list-style-type: none;
+  margin-right: 36px;
+  font-size: 0;
+}
+
+.breadcrumbs-item::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 7px;
+  right: -20px;
+  top: -9px;
+  background-image: url(../images/breadcrumbs-icon-right.svg);
+  background-repeat: no-repeat;
+}
+
+.breadcrumbs-item:last-child::before {
+  position: relative;
+  background: none;
 }
 
 .breadcrumbs-link {
