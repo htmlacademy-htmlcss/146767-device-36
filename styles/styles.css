@@ -113,7 +113,7 @@ body {
 }
 
 .wrapper-search-form {
-  display: flex;
+  font-size: 0;
   position: relative;
   margin-right: 53px;
 }
@@ -855,6 +855,7 @@ body {
 
 .subscription-form {
   display: flex;
+  font-size: 0;
   align-items: center;
 }
 
@@ -865,11 +866,13 @@ body {
   font-size: 18px;
   line-height: 30px;
   width: 557px;
-  height: 52px;
+  height: 55px;
   border: none;
   border-bottom: 3px solid #C4C4C4;
   background: none;
+  padding: 0;
   padding-left: 16px;
+  margin: 0;
 }
 
 .subscription-input::placeholder {
@@ -880,10 +883,12 @@ body {
   width: 253px;
   height: 57px;
   padding: 0;
+  margin: 0;
   border: 3px solid #C4C4C4;
 }
 
 .subscription-form-text {
+  font-size: 18px;
   position: relative;
   margin-left: auto;
 }
@@ -1280,6 +1285,17 @@ body {
 }
 
 /* Карточки товара */
+.product-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  padding-top: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 0;
+}
+
 .product-card-link {
   color: #000000;
   text-decoration: none;
@@ -1287,6 +1303,19 @@ body {
 
 .product-card {
   list-style-type: none;
+  width: 360px;
+  font-size: 0;
+  margin-bottom: 44px;
+}
+
+.product-card-image {
+  display: block;
+  margin-bottom: 32px;
+}
+
+.product-card-inner-text {
+  display: flex;
+  justify-content: space-between;
 }
 
 .product-card-title {
@@ -1294,13 +1323,27 @@ body {
   font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.02em;
+  margin: 0;
+  width: 50%;
 }
 
 .product-card-price {
+  display: block;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: #444444;
+}
+
+/* Загрузить ещё */
+.catalog-product-button {
+  display: block;
+  width: 760px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 44px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .button-preloading {
@@ -1316,12 +1359,28 @@ body {
 }
 
 /* Нумерация страниц */
-.pagination-list {
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #EBEBEB;
+  width: 760px;
+  height: 71px;
+  margin: 0 auto;
+  margin-bottom: 78px;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
 }
 
 .pagination-item {
   list-style-type: none;
+  display: block;
 }
 
 .pagination-button-left,
@@ -1345,10 +1404,19 @@ body {
 }
 
 .pagination-link {
+  display: block;
+  padding: 10px 16px;
   font-size: 16px;
   line-height: 20px;
   color: #444444;
   opacity: 0.3;
+}
+
+.pagination-prev,
+.pagination-next
+{
+  display: block;
+  padding: 20px 25px;
 }
 
 .pagination-current {
