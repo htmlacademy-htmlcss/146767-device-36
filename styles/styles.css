@@ -113,9 +113,8 @@ body {
 }
 
 .wrapper-search-form {
-  font-size: 0;
+  display: flex;
   position: relative;
-  margin-right: 53px;
 }
 
 .wrapper-search-form::before {
@@ -172,6 +171,7 @@ body {
 .navigation-list
 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
   flex-grow: 1;
@@ -179,6 +179,7 @@ body {
 }
 
 .account-item-enter,
+.account-item-compare,
 .account-item-basket
 {
   position: relative;
@@ -192,7 +193,7 @@ body {
   background-image: url(../images/header-index-icon-login.svg);
   background-repeat: no-repeat;
   top: 9px;
-  left: -26px;
+  left: 0;
 }
 
 .account-item-basket::before {
@@ -203,7 +204,26 @@ body {
   background-image: url(../images/header-index-icon-basket.svg);
   background-repeat: no-repeat;
   top: 7px;
-  left: -28px;
+  left: 0;
+}
+
+.account-item-compare::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 12px;
+  background-image: url(../images/header-index-icon-comparison.svg);
+  background-repeat: no-repeat;
+  top: 7px;
+  left: 0;
+}
+
+.account-item {
+  margin-left: 16px;
+}
+
+.account-item:first-child {
+  margin-left: 26px;
 }
 
 .account-item,
@@ -251,37 +271,26 @@ body {
 
 .account-item-exit {
   opacity: 0.3;
-}
-
-.account-item-compare {
-  position: relative;
-  margin-right: 61px;
-}
-
-.account-item-compare::before {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 12px;
-  background-image: url(../images/header-index-icon-comparison.svg);
-  background-repeat: no-repeat;
-  top: 7px;
-  left: -20px;
+  margin: 0;
 }
 
 .navigation-item-delivery,
-.navigation-item-warranty
+.navigation-item-warranty,
+.navigation-item-contacts
 {
-  margin-right: 45px;
+  margin-left: 48px;
 }
 
 .account-link {
+  position: relative;
   font-style: normal;
   text-decoration: none;
   color: #000000;
+  padding-left: 26px;
 }
 
 .navigation-link {
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
@@ -291,6 +300,8 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* Слайдер */
@@ -435,7 +446,7 @@ body {
   padding: 0;
   text-align: center;
   font-size: 0;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .slider-pagination-item {
@@ -464,16 +475,23 @@ body {
 /* Карточки по категориям */
 .product-categories-list {
   display: flex;
-  flex-wrap: nowrap;
-	justify-content: space-between;
+  flex-wrap: wrap;
+	justify-content: flex-start;
   padding: 0;
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
-.product-categories-item{
+.product-categories-item {
   list-style-type: none;
   width: 160px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 40px;
+}
+
+.product-categories-item:nth-child(6n) {
+  margin-right: 0;
 }
 
 .product-categories-link {
@@ -481,7 +499,7 @@ body {
 }
 
 .product-categories-img {
-  margin-bottom: 33px;
+  margin-bottom: 32px;
   background-color: #FFE17F;
 }
 
@@ -499,6 +517,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -0.02em;
+  padding-bottom: 10px;
 }
 
 /* Аккордеон */
@@ -551,11 +570,13 @@ body {
 
 .accordion-button-active {
   color: #FFE17F;
+  width: 100%;
+  padding-left: 20px;
 }
 
 .accordion-button-text {
-  display: inline;
-  vertical-align: middle;
+  display: block;
+  text-align: left;
 }
 
 .accordion-list {
@@ -954,6 +975,7 @@ body {
 
 .footer-list {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -961,16 +983,16 @@ body {
 
 .footer-nav {
   justify-content: space-between;
-  margin-bottom: 62px;
+  margin-bottom: 42px;
 }
 
 .footer-social {
   justify-content: center;
-  margin-bottom: 61px;
+  margin-bottom: 62px;
 }
 
 .footer-item {
-  margin-right: 15px;
+  margin-bottom: 20px;
 }
 
 .footer-item:last-child {
@@ -980,6 +1002,14 @@ body {
 .footer-link {
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.footer-social-item {
+  margin-right: 15px;
+}
+
+.footer-social-item:last-child {
+  margin-right: 0;
 }
 
 .footer-social-link {
@@ -1361,17 +1391,18 @@ body {
 /* Нумерация страниц */
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #EBEBEB;
   width: 760px;
-  height: 71px;
   margin: 0 auto;
   margin-bottom: 78px;
 }
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0;
   margin: 0;
