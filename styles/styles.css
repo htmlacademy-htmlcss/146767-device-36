@@ -244,7 +244,7 @@ body {
   position: absolute;
   overflow: hidden;
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto auto auto;
   grid-auto-flow: column;
   column-gap: 30px;
@@ -276,9 +276,14 @@ body {
   height: 0;
 }
 
+.hidden-catalog-link {
+
+  text-decoration: none;
+  color: #000000;
+}
+
 .hidden-catalog-item {
   list-style-type: none;
-  display: block;
   min-width: 222px;
 }
 
