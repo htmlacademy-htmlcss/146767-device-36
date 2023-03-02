@@ -5,4 +5,5 @@ const hiddenCatalogList = document.getElementsByClassName('hidden-catalog-list')
 // Добавляет обработчик на событие клик
 navButtonDisplay.addEventListener('click', function () {
   hiddenCatalogList.classList.toggle('hidden')
+  navButtonDisplay.classList.toggle('show')
 })

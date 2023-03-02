@@ -255,9 +255,10 @@ body {
   margin: 0;
   padding-left: 60px;
   padding-right: 60px;
+  margin-top: 33px;
   padding-bottom: 27px;
   transition: height 0.4s, padding-bottom 0.4s;
-  top: 70px;
+  top: 35px;
   left: -60px;
   background-color: #FFE17F;
   z-index: 1;
@@ -288,7 +289,9 @@ body {
 }
 
 .navigation-item-button {
+  display: block;
   position: relative;
+  box-sizing: border-box;
   width: 50px;
   height: 50px;
   border: 2px solid #000000;
@@ -298,20 +301,40 @@ body {
   opacity: 0.3;
   background: none;
   cursor: pointer;
+  z-index: 2;
 }
 
-.navigation-item-button::before  {
+.navigation-item-button:hover,
+.navigation-item-button:focus
+{
+  outline: 1px solid #000000;
+  opacity: 1;
+}
+
+.navigation-item-button::before,
+.navigation-item-button::after
+{
+  display: block;
   position: absolute;
   content: "";
-  width: 16px;
-  height: 16px;
   margin: 0 auto;
-  top: 15px;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(../images/header-index-icon-unroll.svg);
+  background-image: url(../images/header-index-icon-hide.svg);
   background-repeat: no-repeat;
+  background-size: auto auto;
+  background-position: center center;
+  transition: transform 0.4s;
+}
+
+.navigation-item-button::after {
+  transform: rotate(90deg);
+}
+
+.navigation-item-button.show::after {
+  transform: rotate(0deg);
 }
 
 .account-item-enter,
@@ -1373,14 +1396,16 @@ body {
 
 /* Карточки товара */
 .product-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 360px);
+  column-gap: 40px;
+  row-gap: 44px;
+  margin: 0;
   padding: 0;
   padding-top: 70px;
+  padding-bottom: 44px;
   padding-left: 40px;
   padding-right: 40px;
-  margin: 0;
 }
 
 .product-card-link {
@@ -1389,15 +1414,15 @@ body {
 }
 
 .product-card {
+  display: flex;
   list-style-type: none;
-  width: 360px;
   font-size: 0;
-  margin-bottom: 44px;
 }
 
 .product-card-image {
   display: block;
   margin-bottom: 32px;
+  object-fit: cover;
 }
 
 .product-card-inner-text {
@@ -1411,7 +1436,7 @@ body {
   line-height: 20px;
   letter-spacing: -0.02em;
   margin: 0;
-  width: 50%;
+  width: 226px;
 }
 
 .product-card-price {
