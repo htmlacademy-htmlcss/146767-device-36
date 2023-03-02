@@ -7,51 +7,63 @@
   </head>
   <body>
 
-    <header class="wrapper-header header-index">
+    <header class="header-index">
 
-      <a class="header-logo-link" title="Вы на главной странице">
-        <img class="logo navigation-logo" src="images/header-index-logo.svg" width="145" height="36" alt="device.">
-      </a>
+      <div class="wrapper-header-index">
 
-      <div class="wrapper-header-line-top">
-        <!-- Форма поиска по сайту -->
-        <form class="wrapper-search-form" action="https://echo.htmlacademy.ru/" method="get">
-          <input class="area-search-form" type="search" placeholder="Поиск по сайту" name="site-search">
-          <button class="button-search-form">Найти</button>
-        </form>
+        <a class="header-logo-link" href="index.html" title="Вы на главной странице">
+          <img class="logo navigation-logo" src="images/header-index-logo.svg" width="145" height="36" alt="device.">
+        </a>
 
-        <!-- Личный кабинет и элементы интерфейса -->
-        <ul class="account-list">
-          <li class="account-item account-item-enter">
-            <a class="account-link" href="#">Войти</a>
-          </li>
-          <li class="account-item account-item-compare">
-            <a class="account-link" href="#">Сравнить</a>
-          </li>
-          <li class="account-item account-item-basket">
-            <a class="account-link" href="#">Корзина</a>
-          </li>
-        </ul>
+        <div class="wrapper-header-line-top">
+          <!-- Форма поиска по сайту -->
+          <form class="wrapper-search-form" action="https://echo.htmlacademy.ru/" method="get">
+            <input class="area-search-form" type="search" placeholder="Поиск по сайту" name="site-search">
+            <button class="button-search-form">Найти</button>
+          </form>
+
+          <!-- Личный кабинет и элементы интерфейса -->
+          <ul class="account-list">
+            <li class="account-item account-item-enter">
+              <a class="account-link" href="#">Войти</a>
+            </li>
+            <li class="account-item account-item-compare">
+              <a class="account-link" href="#">Сравнить</a>
+            </li>
+            <li class="account-item account-item-basket">
+              <a class="account-link" href="#">Корзина</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Навигация по сайту -->
+        <nav class="navigation">
+          <ul class="navigation-list">
+            <li class="navigation-item navigation-item-catalog">
+              <a class="navigation-link" href="catalog.html">Каталог товаров</a>
+              <button class="navigation-item-button" type="button" name="Смотреть список каталога"></button>
+              <ul class="hidden-catalog-list hidden">
+                <li class="hidden-catalog-item">Виртуальная реальность</li>
+                <li class="hidden-catalog-item">Моноподы для cелфи</li>
+                <li class="hidden-catalog-item">Экшн-камеры</li>
+                <li class="hidden-catalog-item">Фитнес-браслеты</li>
+                <li class="hidden-catalog-item item-cell-2">Умные часы</li>
+                <li class="hidden-catalog-item item-cell-3">Квадрокоптеры</li>
+              </ul>
+            </li>
+            <li class="navigation-item navigation-item-delivery">
+              <a class="navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="navigation-item navigation-item-warranty">
+              <a class="navigation-link" href="#">Гарантия</a>
+            </li>
+            <li class="navigation-item navigation-item-contacts">
+              <a class="navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
       </div>
-
-      <!-- Навигация по сайту -->
-      <nav class="navigation">
-        <ul class="navigation-list">
-          <li class="navigation-item navigation-item-catalog">
-            <a class="navigation-link" href="catalog.html">Каталог товаров</a>
-            <button class="navigation-item-button" type="button" name="Смотреть список каталога"></button>
-          </li>
-          <li class="navigation-item navigation-item-delivery">
-            <a class="navigation-link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-item navigation-item-warranty">
-            <a class="navigation-link" href="#">Гарантия</a>
-          </li>
-          <li class="navigation-item navigation-item-contacts">
-            <a class="navigation-link" href="#">Контакты</a>
-          </li>
-        </ul>
-      </nav>
 
     </header>
 
@@ -318,6 +330,8 @@
       </div>
 
     </footer>
+
+    <script src="scripts/javascript.js"></script>
 
   </body>
 </html>
