@@ -547,7 +547,7 @@ body {
 .slider-text-link {
   position: relative;
   display: block;
-  padding: 10px 5px;
+  padding: 10px 0;
   margin-bottom: 60px;
   width: 220px;
   text-align: center;
@@ -781,6 +781,7 @@ body {
 }
 
 .accordion-button {
+  cursor: pointer;
   position: relative;
   width: 160px;
   height: 40px;
@@ -813,9 +814,19 @@ body {
   padding-left: 20px;
 }
 
+.accordion-button-active:hover .accordion-button-text{
+  padding-left: 30px;
+}
+
+.accordion-button-active:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
 .accordion-button-text {
   display: block;
   text-align: left;
+  transition: padding-left 0.4s;
 }
 
 .accordion-list {
@@ -839,6 +850,23 @@ body {
 
 .accordion-item-active {
   background-color: #000000;
+}
+
+.accordion-button:hover.accordion-button::before {
+  top: 0;
+  height: 40px;
+}
+
+.accordion-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.accordion-button:active.accordion-button::before {
+  background-color: #FFCC33;
+}
+
+.accordion-button:disabled {
+  opacity: 0.3;
 }
 
 .accordion-description-title {
@@ -1063,6 +1091,26 @@ body {
   padding: 10px 30px;
 }
 
+.about-us-link:hover.about-us-link::before,
+.contacts-link:hover.contacts-link::before
+{
+  top: 0;
+  height: 40px;
+}
+
+.about-us-link:focus,
+.contacts-link:focus
+{
+  outline: 2px solid #AF4FFF;
+}
+
+.about-us-link:active.about-us-link::before,
+.contacts-link:active.contacts-link::before
+{
+  background-color: #FFCC33;
+}
+
+
 .about-us::before,
 .contacts::before
 {
@@ -1070,7 +1118,6 @@ body {
   content: "";
   width: 84px;
   height: 7px;
-
   background-color: #000000;
 }
 
@@ -1111,8 +1158,20 @@ body {
 }
 
 .contacts-telephone-link {
-  display: block;
+  display: inline-block;
   margin-bottom: 30px;
+}
+
+.contacts-telephone-link:hover {
+  opacity: 0.6;
+}
+
+.contacts-telephone-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.contacts-telephone-link:active {
+  opacity: 0.3;
 }
 
 /* Форма для оформления подписки */
@@ -1161,6 +1220,7 @@ body {
   height: 55px;
   border: none;
   border-bottom: 3px solid #C4C4C4;
+  border-right: 0 solid transparent;
   background: none;
   padding: 0;
   padding-left: 16px;
@@ -1171,12 +1231,40 @@ body {
   opacity: 0.5;
 }
 
+
 .subscription-button {
+  cursor: pointer;
   width: 253px;
   height: 57px;
   padding: 0;
   margin: 0;
   border: 3px solid #C4C4C4;
+}
+
+.subscription-button:hover {
+  background-color: #000000;
+  border: 2px solid #000000;
+  color: #FFFFFF;
+}
+
+.subscription-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.subscription-button:active .subscription-button-text {
+  opacity: 0.3;
+}
+
+.subscription-button:disabled {
+  opacity: 0.3;
+}
+
+.subscription-input:focus,
+.subscription-button:focus
+{
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .subscription-form-text {
@@ -1228,6 +1316,18 @@ body {
   margin-bottom: 35px;
 }
 
+.footer-link-logo :hover {
+  opacity: 0.6;
+}
+
+.footer-link-logo:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.footer-link-logo:active {
+  opacity: 0.3;
+}
+
 .footer-text {
   position: relative;
   font-size: 16px;
@@ -1264,7 +1364,7 @@ body {
 }
 
 .footer-item {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .footer-item:last-child {
@@ -1274,6 +1374,21 @@ body {
 .footer-link {
   text-decoration: none;
   color: #FFFFFF;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.footer-link:hover {
+  color: #FFC700;
+  border-bottom: 2px solid #FFC700;
+}
+
+.footer-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.footer-link:active {
+  opacity: 0.3;
 }
 
 .footer-social-item {
@@ -1293,6 +1408,22 @@ body {
   background: rgba(255, 255, 255, 0.3);
 }
 
+.footer-social-link:hover {
+  background: #FFC700;
+}
+
+.footer-social-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.footer-social-link:active.footer-icon-telegram::before,
+.footer-social-link:active.footer-icon-youtube::before,
+.footer-social-link:active.footer-icon-twitter::before
+{
+  opacity: 0.3;
+}
+
 .footer-icon-telegram::before  {
   position: absolute;
   content: "";
@@ -1303,13 +1434,21 @@ body {
   background-position: 50% 50%;
 }
 
-.footer-icon-youtube {
+.footer-icon-youtube::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
   background-image: url(../images/footer-social-icon-youtube.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
-.footer-icon-twitter {
+.footer-icon-twitter::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
   background-image: url(../images/footer-social-icon-twitter.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -1321,6 +1460,18 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #FFFFFF;
+}
+
+.footer-telephone-link:hover {
+  color: #FFC700;
+}
+
+.footer-telephone-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.footer-telephone-link:active {
+  opacity: 0.3;
 }
 
 /* ################### */
