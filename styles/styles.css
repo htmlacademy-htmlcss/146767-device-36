@@ -1225,6 +1225,7 @@ body {
   padding: 0;
   padding-left: 16px;
   margin: 0;
+  z-index: 1;
 }
 
 .subscription-input::placeholder {
@@ -1265,6 +1266,14 @@ body {
 {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+}
+
+.subscription-input:focus {
+  background: #DCDCDC;
+}
+
+.subscription-input:disabled {
+  opacity: 0.3;
 }
 
 .subscription-form-text {
@@ -1664,6 +1673,7 @@ body {
 }
 
 .catalog-select-control {
+  cursor: pointer;
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
@@ -1672,9 +1682,27 @@ body {
   width: 141px;
   border: none;
   background: none;
+  padding: 5px 0;
+}
+
+.catalog-select-control:hover {
+  opacity: 0.6;
+}
+
+.catalog-select-control:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.catalog-select-control:active {
+  opacity: 0.3;
+}
+
+.catalog-select-control:disabled {
+  opacity: 0.1;
 }
 
 .catalog-filter-button {
+  cursor: pointer;
   position: relative;
   padding: 0;
   margin-left: 60px;
@@ -1693,6 +1721,23 @@ body {
   top: 16px;
   background: #FFE17F;
   z-index: -1;
+}
+
+.catalog-filter-button:hover.catalog-filter-button::before {
+  top: 0;
+  height: 40px;
+}
+
+.catalog-filter-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.catalog-filter-button:active.catalog-filter-button::before {
+  background-color: #FFCC33;
+}
+
+.catalog-filter-button:disabled {
+  opacity: 0.3;
 }
 
 /* Сортировка */
@@ -1717,7 +1762,7 @@ body {
 }
 
 .wrapper-button-sort {
-  font-size: 0;
+  display: flex;
 }
 
 .catalog-select-button {
@@ -1725,8 +1770,20 @@ body {
   width: 30px;
   height: 30px;
   padding: 0;
-  opacity: 0.2;
+  cursor: pointer;
   border: none;
+}
+
+.catalog-select-button:hover {
+  opacity: 0.5;
+}
+
+.catalog-select-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.catalog-select-button:active {
+  opacity: 1;
 }
 
 .catalog-select-button::before {
@@ -1740,16 +1797,22 @@ body {
   bottom: 0;
 }
 
+.button-sort-up:focus {
+  z-index: 1;
+}
+
 .button-sort-up::before {
   background-image: url(../images/catalog-select-button-sort-up.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  opacity: 0.2;
 }
 
 .button-sort-down::before {
   background-image: url(../images/catalog-select-button-sort-down.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  opacity: 0.2;
 }
 
 /* Карточки товара */
@@ -1775,6 +1838,18 @@ body {
   display: flex;
   list-style-type: none;
   font-size: 0;
+}
+
+.product-card:hover .product-card-link{
+  opacity: 0.6;
+}
+
+.product-card-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.product-card:active .product-card-link{
+  opacity: 0.3;
 }
 
 .product-card-image {
@@ -1807,6 +1882,7 @@ body {
 
 /* Загрузить ещё */
 .catalog-product-button {
+  cursor: pointer;
   display: block;
   width: 760px;
   padding: 0;
@@ -1825,6 +1901,25 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: rgba(0, 0, 0, 0);
+  border: 3px solid #E5E5E5;
+}
+
+.button-preloading:hover {
+  border: 3px solid #000000;
+}
+
+.button-preloading:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.button-preloading:active {
+  opacity: 0.3;
+  border: 3px solid #000000;
+}
+
+.button-preloading:disabled {
+  opacity: 0.3;
   border: 3px solid #E5E5E5;
 }
 
@@ -1880,21 +1975,56 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #444444;
+}
+
+.pagination-page {
   opacity: 0.3;
+}
+
+.pagination-current .pagination-page{
+  opacity: 0.6;
+}
+
+.pagination-link:hover:not(.pagination-current) .pagination-page {
+  opacity: 1;
+}
+
+.pagination-link:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.pagination-link:active:not(.pagination-current) .pagination-page {
+  opacity: 0.1;
 }
 
 .pagination-prev,
 .pagination-next
 {
+  cursor: pointer;
   display: block;
   padding: 20px 25px;
 }
 
-.pagination-current {
-  opacity: 0.6;
+.pagination-prev:hover:not(.pagination-disabled),
+.pagination-next:hover:not(.pagination-disabled)
+{
+  background-color: #DCDCDC;
+}
+
+.pagination-prev:focus:not(.pagination-disabled),
+.pagination-next:focus:not(.pagination-disabled)
+{
+  outline: 2px solid #AF4FFF;
+}
+
+.pagination-prev:active:not(.pagination-disabled) .pagination-button-left,
+.pagination-next:active:not(.pagination-disabled) .pagination-button-right
+{
+  opacity: 0.3;
 }
 
 .pagination-disabled {
+  cursor: auto;
   color: #444444;
   opacity: 0.3;
 }
