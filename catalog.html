@@ -19,22 +19,27 @@
           <!-- Форма поиска по сайту -->
           <form class="wrapper-search-form" action="https://echo.htmlacademy.ru/" method="get">
             <input class="area-search-form" type="search" placeholder="Поиск по сайту" name="site-search">
-            <button class="button-search-form">Найти</button>
+            <button class="button-search-form">
+              <span class="button-search-form-text">Найти</span>
+            </button>
           </form>
 
           <!-- Личный кабинет и элементы интерфейса -->
           <ul class="account-list">
             <li class="account-item account-item-enter">
-              <a class="account-link" href="#">Коля Петухов</a>
+              <a class="account-link account-link-enter" href="#">Коля Петухов</a>
             </li>
             <li class="account-item account-item-exit">
               <a class="account-link account-link-exit" href="#">Выйти</a>
             </li>
             <li class="account-item account-item-compare">
-              <a class="account-link" href="#">Сравнить</a>
+              <a class="account-link account-link-compare" href="#">Сравнить</a>
             </li>
             <li class="account-item account-item-basket">
-              <a class="account-link" href="#">Корзина</a>
+              <a class="account-link account-link-basket" href="#">
+                <span class="account-item-basket-count">2</span>
+                Корзина
+              </a>
             </li>
           </ul>
         </div>
@@ -47,7 +52,7 @@
               <button class="navigation-item-button" type="button" name="Смотреть список каталога"></button>
               <ul class="hidden-catalog-list hidden">
                 <li class="hidden-catalog-item">
-                  <a class="hidden-catalog-link" href="#" title="Перейти на страницу каталога Виртуальная реальность">
+                  <a class="hidden-catalog-link active" href="#" title="Перейти на страницу каталога Виртуальная реальность">
                     Виртуальная реальность</a>
                 </li>
                 <li class="hidden-catalog-item">
@@ -73,7 +78,7 @@
               </ul>
             </li>
             <li class="navigation-item navigation-item-delivery">
-              <a class="navigation-link" href="#">Доставка</a>
+              <a class="navigation-link active" href="#">Доставка</a>
             </li>
             <li class="navigation-item navigation-item-warranty">
               <a class="navigation-link" href="#">Гарантия</a>
@@ -221,6 +226,9 @@
             <ul class="product-list">
               <li class="product-card">
                 <a class="product-card-link" href="#" title="Перейти на страницу карточки товара">
+                  <div class="product-card-overlay">
+                    <span class="product-card-overlay-text">Подробнее</span>
+                  </div>
                   <img class="product-card-image" src="images/catalog-product-image-1.jpg" width="360" height="380" alt="селфи-палка с тонкой ручкой и простой системой креплений.">
                   <div class="product-card-inner-text">
                     <h3 class="product-card-title">Любительская<br> селфи-палка</h3>
@@ -230,6 +238,9 @@
               </li>
               <li class="product-card">
                 <a class="product-card-link" href="#" title="Перейти на страницу карточки товара">
+                  <div class="product-card-overlay">
+                    <span class="product-card-overlay-text">Подробнее</span>
+                  </div>
                   <img class="product-card-image" src="images/catalog-product-image-2.jpg" width="360" height="380" alt="селфи-палка с утолщенной ручкой и дополнительными крепежами.">
                   <div class="product-card-inner-text">
                     <h3 class="product-card-title">Профессиональная селфи-палка</h3>
@@ -239,6 +250,9 @@
               </li>
               <li class="product-card">
                 <a class="product-card-link" href="#" title="Перейти на страницу карточки товара">
+                  <div class="product-card-overlay">
+                    <span class="product-card-overlay-text">Подробнее</span>
+                  </div>
                   <img class="product-card-image" src="images/catalog-product-image-3.jpg" width="360" height="380" alt="селфи-палка с прорезиненой ручкой и специальным боксом для смартфона.">
                   <div class="product-card-inner-text">
                     <h3 class="product-card-title">Непотопляемая<br> селфи-палка</h3>
@@ -248,6 +262,9 @@
               </li>
               <li class="product-card">
                 <a class="product-card-link" href="#" title="Перейти на страницу карточки товара">
+                  <div class="product-card-overlay">
+                    <span class="product-card-overlay-text">Подробнее</span>
+                  </div>
                   <img class="product-card-image" src="images/catalog-product-image-4.jpg" width="360" height="380" alt="криповатая селфи-палка рука для ваших ночных кошмаров.">
                   <div class="product-card-inner-text">
                     <h3 class="product-card-title">Селфи-палка "Следуй за мной"</h3>
@@ -267,19 +284,29 @@
               </a>
               <ol class="pagination-list">
                 <li class="pagination-item">
-                  <a class="pagination-link pagination-current">1</a>
+                  <a class="pagination-link pagination-current">
+                    <span class="pagination-page">1</span>
+                  </a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">2</a>
+                  <a class="pagination-link" href="#">
+                    <span class="pagination-page">2</span>
+                  </a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">3</a>
+                  <a class="pagination-link" href="#">
+                    <span class="pagination-page">3</span>
+                  </a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link">...</a>
+                  <a class="pagination-link">
+                    <span class="pagination-page">...</span>
+                  </a>
                 </li>
                 <li class="pagination-item">
-                  <a class="pagination-link" href="#">15</a>
+                  <a class="pagination-link" href="#">
+                    <span class="pagination-page">15</span>
+                  </a>
                 </li>
               </ol>
               <a class="pagination-next" href="#">

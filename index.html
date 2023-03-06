@@ -19,19 +19,24 @@
           <!-- Форма поиска по сайту -->
           <form class="wrapper-search-form" action="https://echo.htmlacademy.ru/" method="get">
             <input class="area-search-form" type="search" placeholder="Поиск по сайту" name="site-search">
-            <button class="button-search-form">Найти</button>
+            <button class="button-search-form">
+              <span class="button-search-form-text">Найти</span>
+            </button>
           </form>
 
           <!-- Личный кабинет и элементы интерфейса -->
           <ul class="account-list">
             <li class="account-item account-item-enter">
-              <a class="account-link" href="#">Войти</a>
+              <a class="account-link account-link-enter" href="#">Войти</a>
             </li>
             <li class="account-item account-item-compare">
-              <a class="account-link" href="#">Сравнить</a>
+              <a class="account-link account-link-compare" href="#">Сравнить</a>
             </li>
             <li class="account-item account-item-basket">
-              <a class="account-link" href="#">Корзина</a>
+              <a class="account-link account-link-basket" href="#">
+                <span class="account-item-basket-count">2</span>
+                Корзина
+              </a>
             </li>
           </ul>
         </div>
@@ -44,7 +49,7 @@
               <button class="navigation-item-button" type="button" name="Смотреть список каталога"></button>
               <ul class="hidden-catalog-list hidden">
                 <li class="hidden-catalog-item">
-                  <a class="hidden-catalog-link" href="#" title="Перейти на страницу каталога Виртуальная реальность">
+                  <a class="hidden-catalog-link active" href="#" title="Перейти на страницу каталога Виртуальная реальность">
                     Виртуальная реальность</a>
                 </li>
                 <li class="hidden-catalog-item">
@@ -70,7 +75,7 @@
               </ul>
             </li>
             <li class="navigation-item navigation-item-delivery">
-              <a class="navigation-link" href="#">Доставка</a>
+              <a class="navigation-link active" href="#">Доставка</a>
             </li>
             <li class="navigation-item navigation-item-warranty">
               <a class="navigation-link" href="#">Гарантия</a>
@@ -92,11 +97,13 @@
       <!-- Слайдер -->
       <section class="main-slider">
         <h2 class="visually-hidden">Акции и популярные товары</h2>
-        <span class="slider-number">01</span>
 
         <!-- Слайды с описанием -->
         <div class="wrapper-slider">
-          <img class="slider-image" src="images/main-slider-slide-1.png" width="560" alt="Квадрокоптер с четырьмя лопостями, белым корпусом и инфракрасной камерой.">
+          <span class="slider-number">01</span>
+          <div class="wrapper-slider-left-column">
+            <img class="slider-image" src="images/main-slider-slide-1.png" width="560" height="560" alt="Квадрокоптер с четырьмя лопостями, белым корпусом и инфракрасной камерой.">
+          </div>
           <div class="wrapper-slider-right-column">
             <em class="slider-heading">Порхает как бабочка, жалит как пчела!</em>
             <p class="slider-text">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
@@ -110,7 +117,7 @@
 
         <!-- Кнопки переключения слайдов вперёд и назад -->
         <div class="wrapper-slider-button">
-          <button class="slider-button slider-prev" type="button">
+          <button class="slider-button slider-prev" type="button" disabled>
             <span class="visually-hidden">
               Предыдущее фото
             </span>
@@ -125,7 +132,7 @@
         <!-- Нумерация слайдов -->
         <ol class="slider-pagination">
           <li class="slider-pagination-item">
-            <button class="slider-pagination-button slider-pagination-button-current" type="button">
+            <button class="slider-pagination-button active" type="button">
               <span class="visually-hidden">1 фото</span>
             </button>
           </li>
@@ -223,9 +230,9 @@
       <section class="info-block">
         <h2 class="visually-hidden">Специальные услуги</h2>
         <a class="info-block-link" href="#" title="Узнать подробности">
-          <div class="info-block-icon"></div>
+          <div class="info-block-icon info-block-icon-left"></div>
           <em class="info-block-text">Доставим редкий товар под заказ</em>
-          <div class="info-block-icon"></div>
+          <div class="info-block-icon info-block-icon-right"></div>
         </a>
       </section>
 
@@ -279,7 +286,9 @@
           <!-- Форма для оформления подписки -->
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
             <input class="subscription-input" type="email" placeholder="Ваш e-mail">
-            <button class="subscription-button" type="submit">Подписаться</button>
+            <button class="subscription-button" type="submit">
+              <span class="subscription-button-text">Подписаться</span>
+            </button>
             <span class="subscription-form-text">Это бесплатно</span>
           </form>
         </div>
