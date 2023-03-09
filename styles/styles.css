@@ -1,9 +1,3 @@
-/* ################### */
-/* ##  index.html   ## */
-/* ################### */
-
-/* Глобальные стили */
-
 /* Шрифты */
 
 /* Raleway */
@@ -32,6 +26,8 @@
   src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
   font-display: swap;
 }
+
+/* Глобальные стили */
 
 html {
   height: 100%;
@@ -68,6 +64,10 @@ body {
 }
 
 /* Локальные стили */
+
+/* ################### */
+/* ##  index.html   ## */
+/* ################### */
 
 /* Навигация */
 .wrapper-header-index,
@@ -368,10 +368,16 @@ body {
   grid-row: span 3;
 }
 
+
 .hidden-catalog-list.hidden {
   padding-bottom: 0;
   height: 0;
 }
+
+/* .navigation-item-catalog:focus-within .hidden-catalog-list.hidden {
+  padding-bottom: 27px;
+  height: 180px;
+}  */
 
 .hidden-catalog-link {
   text-decoration: none;
@@ -1164,6 +1170,9 @@ body {
 
 .contacts-list {
   margin: 0;
+}
+
+.contacts-list + .contacts-list {
   margin-bottom: 30px;
 }
 
@@ -1604,7 +1613,7 @@ body {
   opacity: 0.3;
 }
 
-/* Фильтр  */
+/* Фильтры  */
 .catalog-filter-header {
   font-family: 'Raleway';
   font-style: normal;
@@ -1618,21 +1627,48 @@ body {
   margin-bottom: 60px;
 }
 
-.range-value {
-  width: 100%;
+/* "Ползунок" минимальная/максимальная цена */
+.range {
+  margin-top: 10px;
+  margin-bottom: 40px;
 }
 
-.range-min,
-.range-max
-{
-  font-size: 14px;
-  line-height: 20px;
-  color: #000000;
-  opacity: 0.3;
+.range-scale {
+  position: relative;
+  height: 2px;
+  margin-bottom: 16px;
+  background-color: #DCDCDC;
+  border-radius: 2px;
 }
 
-.range-min {
-  margin-right: 67px;
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #EBEBEB;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.range-toggle:hover {
+  background: #f5f5f5;
+  border: 2px solid #808080;
+}
+
+.range-toggle:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.range-toggle:active {
+  background-color: #000000;
 }
 
 .catalog-filter {
@@ -1640,6 +1676,68 @@ body {
   margin-right: 60px;
 }
 
+.toggle-min {
+  top: -8px;
+  left: -10px;
+}
+
+.toggle-max {
+  top: -8px;
+  right: -10px;
+}
+
+.range-wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.catalog-filter-label {
+  position: relative;
+  top: 16px;
+  display: flex;
+  margin: 0;
+  color: #808080;
+  padding-left: 20px;
+}
+
+.range-input-text {
+  position: absolute;
+}
+
+.range-input:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.catalog-filter-label:first-child {
+  left: -30px;
+}
+
+.catalog-filter-label:last-child {
+  right: -12px;
+}
+
+.range-input {
+  width: 30px;
+  padding: 0 2px;
+  padding-left: 20px;
+  font: inherit;
+  text-align: center;
+  background-color: transparent;
+  color: #808080;
+  border: none;
+  appearance: textfield;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Чекбокс со множественным выбором */
 .catalog-filter-group {
   position: relative;
   display: block;
@@ -1691,40 +1789,76 @@ body {
   margin-bottom: 0;
 }
 
-.catalog-select-control {
+.control {
   cursor: pointer;
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 30px;
-  width: 141px;
-  border: none;
-  background: none;
-  padding: 5px 0;
+  position: relative;
+  display: block;
+  padding-left: 36px;
 }
 
-.catalog-select-control:hover {
+.control:hover {
   opacity: 0.6;
 }
 
-.catalog-select-control:focus {
-  outline: 2px solid #AF4FFF;
-}
-
-.catalog-select-control:active {
+.control:active {
   opacity: 0.3;
 }
 
-.catalog-select-control:disabled {
+.control:disabled {
   opacity: 0.1;
 }
 
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #CCCCCC;
+  border-radius: 3px;
+}
+
+.control-input:focus + .control-mark {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.control-input:disabled + .control-mark {
+  border-color: #242424;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark {
+  border: 2px solid #000000;
+  background-image: url(../images/catalog-filter-icon-tick.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Радио-чекбокс */
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark {
+  border: 2px solid #000000;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #000000;
+  border-radius: 50%;
+  content: "";
+}
+
+/* Кнопка отправки формы фильтров */
 .catalog-filter-button {
   cursor: pointer;
   position: relative;
   padding: 0;
-  margin-left: 60px;
   border: none;
   background: none;
   width: 220px;
@@ -1780,6 +1914,47 @@ body {
   margin: 0;
 }
 
+/* Выпадающий список с единичным выбором */
+.catalog-select-control {
+  cursor: pointer;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  width: 142px;
+  border: none;
+  background: none;
+  padding: 0;
+  padding-right: 30px;
+  appearance: none;
+  background-image: url(../images/catalog-select-button-sort-under.svg);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+.catalog-select-control:hover {
+  opacity: 0.6;
+}
+
+.catalog-select-control:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.catalog-select-control:active {
+  opacity: 0.3;
+}
+
+.catalog-select-control:disabled {
+  opacity: 0.1;
+}
+
+.catalog-select-option {
+  margin: 0;
+  padding: 0;
+}
+
+/* Кнопки сортировки по возрастанию/по убыванию */
 .wrapper-button-sort {
   display: flex;
 }
