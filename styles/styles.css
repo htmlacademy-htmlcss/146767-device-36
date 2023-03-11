@@ -420,6 +420,7 @@ body {
   background-image: url(../images/popover-card-button-icon-close.svg);
   background-repeat: no-repeat;
   background-position: center;
+  margin-left: 20px;
 }
 
 .popover-cart-button:hover {
@@ -447,7 +448,9 @@ body {
   margin: 0;
 }
 
-.popover-card-description-item {
+.popover-card-description-item,
+.popover-card-definition-item
+{
   padding: 0;
   margin: 0;
 }
@@ -753,6 +756,7 @@ body {
 .slider-number {
   position: absolute;
   display: block;
+  overflow: hidden;
   width: 100%;
   height: 120px;
   box-sizing: border-box;
@@ -1059,7 +1063,7 @@ body {
   padding-left: 20px;
 }
 
-.accordion-button-active:hover .accordion-button-text{
+.accordion-button-active:hover .accordion-button-text {
   padding-left: 30px;
 }
 
@@ -1529,6 +1533,10 @@ body {
 
 .subscription-input:disabled {
   opacity: 0.3;
+}
+
+.subscription-input:invalid {
+  border-bottom: 3px solid #FF3D3D;
 }
 
 .subscription-form-text {
@@ -2486,4 +2494,370 @@ body {
   cursor: auto;
   color: #444444;
   opacity: 0.3;
+}
+
+/* Модальное окно */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 240, 240, 0.9);
+  z-index: 3;
+  display: flex;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 72px 80px;
+  background-color: #ffffff;
+}
+
+.modal-delivery {
+  width: 760px;
+  border: 10px solid #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка закрытия модального окна */
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 84px;
+  right: 80px;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
+.modal-close-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+/* Заголовок модального окна */
+.modal-title {
+  margin: 0;
+  margin-bottom: 42px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 50px;
+}
+
+/* Форма отправки данных: имя, почта, заказ (текст), количество */
+.delivery-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.delivery-label {
+  position: relative;
+  margin-bottom: 42px;
+}
+
+.delivery-label-text {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 14px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+}
+
+.delivery-input {
+  position: relative;
+  width: 360px;
+  height: 60px;
+  padding: 20px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  background: #EBEBEB;
+  border: none;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.delivery-input-name-icon,
+.delivery-input-mail-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 45px;
+  fill: #B3B3B3;
+}
+
+.delivery-input:placeholder-shown {
+  background-color: #F0F0F0;
+}
+
+.delivery-input-order-number {
+  background: #F0F0F0;
+}
+
+.delivery-input::placeholder {
+  opacity: 0.3;
+}
+
+.delivery-input:not(:disabled):hover {
+  background: #DCDCDC;
+}
+
+.delivery-input:not(:disabled):focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.delivery-input:disabled {
+  opacity: 0.3;
+}
+
+.delivery-icon + .delivery-input:disabled {
+  background: #B3B3B3;
+}
+
+.delivery-input-mail-help-text {
+  display: block;
+  position: relative;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.delivery-input-name:invalid,
+.delivery-input-mail:invalid,
+.delivery-input-order-number:invalid
+{
+  position: relative;
+  border: 2px solid #FF3D3D;
+}
+
+.delivery-input-mail:invalid ~ .delivery-input-mail-help-text,
+.delivery-input-name:invalid ~ .delivery-input-mail-help-text
+{
+  color: #FF3D3D;
+}
+
+.delivery-input-order-text {
+  width: 540px;
+  padding-right: 20px;
+}
+
+.delivery-input-order-number::-webkit-outer-spin-button,
+.delivery-input-order-number::-webkit-inner-spin-button
+{
+  appearance: none;
+}
+
+.delivery-button,
+.delivery-input-order-number
+{
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  text-align: center;
+}
+
+.wrapper-delivery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  width: 180px;
+}
+
+.delivery-button {
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #F0F0F0;
+
+}
+
+.delivery-button:hover {
+  background: #EBEBEB;
+}
+
+.delivery-button:not(:disabled):hover .delivery-button-icon-minus,
+.delivery-button:not(:disabled):hover .delivery-button-icon-plus
+{
+  opacity: 0.6;
+}
+
+.delivery-button:not(:disabled):focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.delivery-button:not(:disabled) {
+  background: #F0F0F0;
+}
+
+.delivery-button:not(:disabled) .delivery-button-icon-minus,
+.delivery-button:not(:disabled) .delivery-button-icon-plus
+{
+  opacity: 0.3;
+}
+
+.delivery-button:disabled {
+  cursor: auto;
+  background: #F0F0F0;
+  opacity: 0.3;
+}
+
+.wrapper-delivery-buttons {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.delivery-label-order {
+  display: block;
+  width: 100%;
+  margin: 0;
+}
+
+/* Кнопка отправки формы */
+.delivery-form-button {
+  cursor: pointer;
+  position: relative;
+  width: 200px;
+  height: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.delivery-form-button::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 200px;
+  height: 8px;
+  top: 16px;
+  background: #FFE17F;
+}
+
+.delivery-form-button-text {
+  position: relative;
+}
+
+.delivery-form-button:hover.delivery-form-button::before {
+  top: 0;
+  height: 40px;
+}
+
+.delivery-form-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.delivery-form-button:active.delivery-form-button::before {
+  background-color: #FFCC33;
+}
+
+.delivery-form-button:disabled {
+  opacity: 0.3;
+}
+
+/* Всплывающая подсказка, Тултип */
+.tooltip {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+
+.tooltip-toggle {
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: #FFE17F;
+  padding: 0;
+  margin: 0;
+  display: block;
+  border-radius: 50%;
+}
+
+.tooltip-toggle-icon {
+  display: block;
+  margin: 0 auto;
+}
+
+.tooltip-toggle:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.form-label-icon {
+  position: absolute;
+  top: 0;
+  left: 120px;
+}
+
+.tooltip-text {
+  position: absolute;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 19px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  background: #000000;
+  box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
+  left: 50%;
+  transform: translate(-65%, 10px);
+  z-index: 2;
+  display: none;
+}
+
+.tooltip-text:after {
+  content:'';
+  background: #000000;
+  width: 14px;
+  height: 14px;
+  position:absolute;
+  transform: rotate(45deg);
+  top: -3px;
+  right: 63px;
+}
+
+.form-label:hover .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
 }

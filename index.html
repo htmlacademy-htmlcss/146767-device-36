@@ -11,6 +11,8 @@
 
       <div class="wrapper-header-index">
 
+        <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
+
         <a class="header-logo-link" href="index.html" title="Вы на главной странице">
           <img class="logo navigation-logo" src="images/header-index-logo.svg" width="145" height="36" alt="device.">
         </a>
@@ -24,6 +26,7 @@
             </button>
           </form>
 
+          <h2 class="visually-hidden">Личный кабинет, навигационные ссылки</h2>
           <!-- Личный кабинет и элементы интерфейса -->
           <ul class="account-list">
             <li class="account-item account-item-enter">
@@ -37,12 +40,14 @@
                 <span class="account-item-basket-count">2</span>
                 Корзина
               </a>
+              <!-- Корзина, всплывающий popover -->
               <div class="popover popover-cart">
+                <h3 class="visually-hidden">Корзина</h3>
                 <ul class="popover-card-list">
                   <li class="popover-card-item">
                     <a class="popover-card-link" href="#" title="Перейти на страницу карточки товара.">
-                      <img class="popover-card-image" src="images/catalog-product-image-small-1.jpg" alt="селфи-палка с тонкой ручкой и простой системой креплений." width="39px" height="43px">
-                      <p class="popover-card-text">Любительская селфи-палка</p>
+                      <img class="popover-card-image" src="images/catalog-product-image-small-1.jpg" alt="селфи-палка с тонкой ручкой и простой системой креплений." width="39" height="43">
+                      <h4 class="popover-card-text">Любительская селфи-палка</h4>
                     </a>
                     <button class="popover-cart-button" type="button">
                       <span class="visually-hidden">Закрыть</span>
@@ -50,8 +55,8 @@
                   </li>
                   <li class="popover-card-item">
                     <a class="popover-card-link" href="#" title="Перейти на страницу карточки товара.">
-                      <img class="popover-card-image" src="images/catalog-product-image-small-2.jpg" alt="селфи-палка с утолщенной ручкой и дополнительными крепежами." width="39px" height="43px">
-                      <p class="popover-card-text">Профессиональная селфи-палка</p>
+                      <img class="popover-card-image" src="images/catalog-product-image-small-2.jpg" alt="селфи-палка с утолщенной ручкой и дополнительными крепежами." width="39" height="43">
+                      <h4 class="popover-card-text">Профессиональная селфи-палка</h4>
                     </a>
                     <button class="popover-cart-button" type="button">
                       <span class="visually-hidden">Закрыть</span>
@@ -59,26 +64,30 @@
                   </li>
                 </ul>
                 <dl class="popover-card-description-list">
-                  <dd class="popover-card-description-item">Товаров: </dd>
-                  <dt class="popover-card-definition-item">
+                  <dt class="popover-card-description-item">Товаров: </dt>
+                  <dd class="popover-card-definition-item">
                     <span class="popover-card-definition-text">2</span>
-                  </dt>
-                  <dd class="popover-card-description-item">Сумма: </dd>
-                  <dt class="popover-card-definition-item">
+                  </dd>
+                  <dt class="popover-card-description-item">Сумма: </dt>
+                  <dd class="popover-card-definition-item">
                     <span class="popover-card-definition-text">2000</span>
                     &#8381;
-                  </dt>
+                  </dd>
                 </dl>
                 <a class="popover-cart-link" href="#" title="Смотреть все добавленные товары">
                   <span class="popover-cart-text">Открыть карзину</span>
                 </a>
               </div>
+
             </li>
           </ul>
         </div>
 
         <!-- Навигация по сайту -->
         <nav class="navigation">
+
+          <h2 class="visually-hidden">Навигационное меню сайта</h2>
+
           <ul class="navigation-list">
             <li class="navigation-item navigation-item-catalog">
               <a class="navigation-link" href="catalog.html">Каталог товаров</a>
@@ -127,8 +136,6 @@
     </header>
 
     <main class="main-container main-index">
-
-      <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
 
       <!-- Слайдер -->
       <section class="main-slider">
@@ -394,6 +401,104 @@
       </div>
 
     </footer>
+
+    <!-- Модальное окно "Доставка под заказ" -->
+    <div class="modal-container">
+      <div class="modal modal-delivery">
+
+        <!-- Кнопка закрытия модального окна -->
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 2.36364L23.6364 0L13 10.6364L2.36364 0L0 2.36364L10.6364 13L0 23.6364L2.36364 26L13 15.3636L23.6364 26L26 23.6364L15.3636 13L26 2.36364Z" fill="black"/>
+          </svg>
+        </button>
+
+        <!-- Форма отправки данных: имя, почта, заказ (текст), количество -->
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+          <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
+
+            <!-- Поле ввода имени -->
+            <label class="delivery-label">
+              <span class="delivery-label-text">Ваше имя:</span>
+              <input class="delivery-input delivery-input-name" type="text" name="delivery-name" placeholder="Введите имя">
+              <svg class="delivery-icon delivery-input-name-icon" xmlns="http://www.w3.org/2000/svg" width="13" height="12" fill="black">
+                <path d="M0 12h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3C10 1.6 8.4 0 6.5 0S3 1.6 3 3.5c0 1.3.7 2.4 1.7 3C2.1 7.2.2 9.4 0 12Z"/>
+              </svg>
+              <span class="delivery-input-mail-help-text">Добавьте имя</span>
+            </label>
+
+            <!-- Поле ввода почты -->
+            <label class="delivery-label">
+              <span class="delivery-label-text">Ваш e-mail:</span>
+              <input class="delivery-input delivery-input-mail" type="email" name="delivery-mail" placeholder="Введите почту">
+              <svg class="delivery-icon delivery-input-mail-icon" width="15" height="12" fill="black" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.6 8C7.2 8 7 7.9 6.6 7.7L0 4V11C0 11.6 0.4 12 0.9 12H14.1C14.7 12 15 11.6 15 11V4L8.5 7.7C8.1 7.9 7.9 8 7.6 8ZM14.1 0H0.9C0.4 0 0 0.5 0 1V1.8L7.5 6L15 1.8V1C15 0.5 14.6 0 14.1 0Z"/>
+              </svg>
+              <span class="delivery-input-mail-help-text">Забавный у вас адрес</span>
+            </label>
+
+            <!-- Поле ввода текста заказа -->
+            <label class="delivery-label">
+              <span class="delivery-label-text">Что нужно привезти:</span>
+              <input class="delivery-input delivery-input-order-text" type="text" name="delivery-order" placeholder="В свободной форме">
+            </label>
+
+            <div class="wrapper-delivery">
+
+              <!-- Поле ввода количества товара -->
+              <label class="delivery-label-order" for="delivery-order-number">
+                <span class="delivery-label-text">Количество:
+                </span>
+              </label>
+
+              <!-- Всплывающая подсказка -->
+              <span class="form-label form-label-icon">
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-order">
+                    <svg class="tooltip-toggle-icon" width="2" height="12" viewBox="0 0 2 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M2 0H0V2H2V0Z" fill="black"/>
+                      <path d="M2 4H0V12H2V4Z" fill="black"/>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-order">Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.</span>
+                </span>
+              </span>
+
+              <div class="wrapper-delivery-buttons">
+                <!-- Кнопка "Добавить товар" -->
+                <button class="delivery-button delivery-button-minus" type="button">
+                  <span class="visually-hidden">Уменьшить количество товаров на 1шт.</span>
+                  <svg class="delivery-button-icon-minus" width="16" height="2" viewBox="0 0 16 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 0H0V2H16V0Z" fill="black"/>
+                  </svg>
+                </button>
+
+                <!-- Поле ввода количества товара -->
+                <input class="delivery-input delivery-input-order-number" id="delivery-order-number" type="number" name="delivery-order" min="0" value="1">
+
+                <!-- Кнопка "Убрать товар" -->
+                <button class="delivery-button delivery-button-plus" type="button">
+                  <span class="visually-hidden">Увеличить количество товаров на 1шт.</span>
+                  <svg class="delivery-button-icon-plus" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7H9V0H7V7H0V9H7V16H9V9H16V7Z" fill="black"/>
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Кнопка отправки формы -->
+            <button class="delivery-form-button" type="submit">
+              <span class="delivery-form-button-text">Отправить</span>
+            </button>
+
+          </form>
+
+        </section>
+      </div>
+    </div>
 
     <script src="scripts/javascript.js"></script>
 

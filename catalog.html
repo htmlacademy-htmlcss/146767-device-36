@@ -11,6 +11,8 @@
 
       <div class="wrapper-header-index">
 
+        <h1 class="visually-hidden">Интернет-магазин "Девайс"</h1>
+
         <a class="header-logo-link" href="index.html" title="На главную страницу">
           <img class="logo navigation-logo" src="images/header-index-logo.svg" width="145" height="36" alt="device.">
         </a>
@@ -24,6 +26,7 @@
             </button>
           </form>
 
+          <h2 class="visually-hidden">Личный кабинет, навигационные ссылки</h2>
           <!-- Личный кабинет и элементы интерфейса -->
           <ul class="account-list">
             <li class="account-item account-item-enter">
@@ -40,12 +43,14 @@
                 <span class="account-item-basket-count">2</span>
                 Корзина
               </a>
+              <!-- Корзина, всплывающий popover -->
               <div class="popover popover-cart">
+                <h3 class="visually-hidden">Корзина</h3>
                 <ul class="popover-card-list">
                   <li class="popover-card-item">
                     <a class="popover-card-link" href="#" title="Перейти на страницу карточки товара.">
-                      <img class="popover-card-image" src="images/catalog-product-image-small-1.jpg" alt="селфи-палка с тонкой ручкой и простой системой креплений." width="39px" height="43px">
-                      <p class="popover-card-text">Любительская селфи-палка</p>
+                      <img class="popover-card-image" src="images/catalog-product-image-small-1.jpg" alt="селфи-палка с тонкой ручкой и простой системой креплений." width="39" height="43">
+                      <h4 class="popover-card-text">Любительская селфи-палка</h4>
                     </a>
                     <button class="popover-cart-button" type="button">
                       <span class="visually-hidden">Закрыть</span>
@@ -53,8 +58,8 @@
                   </li>
                   <li class="popover-card-item">
                     <a class="popover-card-link" href="#" title="Перейти на страницу карточки товара.">
-                      <img class="popover-card-image" src="images/catalog-product-image-small-2.jpg" alt="селфи-палка с утолщенной ручкой и дополнительными крепежами." width="39px" height="43px">
-                      <p class="popover-card-text">Профессиональная селфи-палка</p>
+                      <img class="popover-card-image" src="images/catalog-product-image-small-2.jpg" alt="селфи-палка с утолщенной ручкой и дополнительными крепежами." width="39" height="43">
+                      <h4 class="popover-card-text">Профессиональная селфи-палка</h4>
                     </a>
                     <button class="popover-cart-button" type="button">
                       <span class="visually-hidden">Закрыть</span>
@@ -62,26 +67,30 @@
                   </li>
                 </ul>
                 <dl class="popover-card-description-list">
-                  <dd class="popover-card-description-item">Товаров: </dd>
-                  <dt class="popover-card-definition-item">
+                  <dt class="popover-card-description-item">Товаров: </dt>
+                  <dd class="popover-card-definition-item">
                     <span class="popover-card-definition-text">2</span>
-                  </dt>
-                  <dd class="popover-card-description-item">Сумма: </dd>
-                  <dt class="popover-card-definition-item">
+                  </dd>
+                  <dt class="popover-card-description-item">Сумма: </dt>
+                  <dd class="popover-card-definition-item">
                     <span class="popover-card-definition-text">2000</span>
                     &#8381;
-                  </dt>
+                  </dd>
                 </dl>
                 <a class="popover-cart-link" href="#" title="Смотреть все добавленные товары">
                   <span class="popover-cart-text">Открыть карзину</span>
                 </a>
               </div>
+
             </li>
           </ul>
         </div>
 
         <!-- Навигация по сайту -->
         <nav class="navigation">
+
+          <h2 class="visually-hidden">Навигационное меню сайта</h2>
+
           <ul class="navigation-list">
             <li class="navigation-item navigation-item-catalog">
               <a class="navigation-link" href="catalog.html">Каталог товаров</a>
@@ -132,7 +141,7 @@
     <main class="main-container main-inner">
 
       <header class="inner-header">
-        <h1 class="visually-hidden">Список товаров с фильтрами</h1>
+        <h2 class="visually-hidden">Список товаров с фильтрами</h2>
         <strong class="main-inner-title">Моноподы для селфи</strong>
 
         <!-- Навигация "Хлебные крошки" -->
