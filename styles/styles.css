@@ -1151,28 +1151,33 @@ body {
   margin-bottom: 70px;
 }
 
-.info-block-link {
+.info-block-button {
   display: flex;
+  cursor: pointer;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
   color: #000000;
   background-color: #F0F0F0;
+  border: none;
+  padding: 0;
 }
 
-.info-block-link:hover .info-block-icon-left {
+.info-block-button:hover .info-block-icon-left {
   background-color: #FFC700;
 }
 
-.info-block-link:hover .info-block-icon-right::before {
+.info-block-button:hover .info-block-icon-right::before {
   opacity: 1;
 }
 
-.info-block-link:focus {
+.info-block-button:focus {
   outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
-.info-block-link:active {
+.info-block-button:active {
   opacity: 0.3;
 }
 
@@ -2503,9 +2508,19 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(240, 240, 240, 0.9);
   z-index: 3;
   display: flex;
+}
+
+.modal-container-delivery.hidden {
+  display: none;
+}
+
+.modal-container-overlay {
+  position: absolute;
+  background: rgba(240, 240, 240, 0.9);
+  width: 100%;
+  height: 100%;
 }
 
 .modal {

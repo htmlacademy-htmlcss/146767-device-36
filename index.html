@@ -272,11 +272,11 @@
       <!-- Информационный блок-ссылка -->
       <section class="info-block">
         <h2 class="visually-hidden">Специальные услуги</h2>
-        <a class="info-block-link" href="#" title="Узнать подробности">
+        <button type="button" class="info-block-button" title="Узнать подробности">
           <div class="info-block-icon info-block-icon-left"></div>
           <em class="info-block-text">Доставим редкий товар под заказ</em>
           <div class="info-block-icon info-block-icon-right"></div>
-        </a>
+        </button type="button">
       </section>
 
       <div class="wrapper-about-us-contacts">
@@ -403,7 +403,8 @@
     </footer>
 
     <!-- Модальное окно "Доставка под заказ" -->
-    <div class="modal-container">
+    <div class="modal-container modal-container-delivery hidden">
+      <div class="modal-container-overlay"></div>
       <div class="modal modal-delivery">
 
         <!-- Кнопка закрытия модального окна -->
@@ -499,6 +500,29 @@
         </section>
       </div>
     </div>
+
+    <script>
+
+      // Модальное окно "Доставка под заказ"
+      const infoBlockButton = document.getElementsByClassName('info-block-button') [0]
+      const modalContainerDelivery = document.getElementsByClassName('modal-container-delivery') [0]
+      const modalCloseButtonDelivery = document.getElementsByClassName('modal-close-button') [0]
+      const modalOverlayDelivery = document.getElementsByClassName('modal-container-overlay') [0]
+
+      // Вызов модального окна по клику на инфоблок
+      infoBlockButton.addEventListener('click', function () {
+        modalContainerDelivery.classList.toggle('hidden')
+      });
+      // Закрытие модального окна по кнопке крестик
+      modalCloseButtonDelivery.addEventListener('click', function () {
+        modalContainerDelivery.classList.toggle('hidden')
+      });
+      // Закрытие модального окна по оверлею
+      modalOverlayDelivery.addEventListener('click', function () {
+        modalContainerDelivery.classList.toggle('hidden')
+      });
+
+    </script>
 
     <script src="scripts/javascript.js"></script>
 

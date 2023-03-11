@@ -6,4 +6,4 @@ const hiddenCatalogList = document.getElementsByClassName('hidden-catalog-list')
 navButtonDisplay.addEventListener('click', function () {
   hiddenCatalogList.classList.toggle('hidden')
   navButtonDisplay.classList.toggle('show')
-})
+});
