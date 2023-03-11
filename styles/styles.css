@@ -1036,7 +1036,6 @@ body {
   height: 290px;
   background-color: #F0F0F0;
   top: 102px;
-  /* z-index: -1; */
 }
 
 .wrapper-services {
@@ -1075,11 +1074,14 @@ body {
 .accordion-button-active {
   color: #FFE17F;
   width: 100%;
-  padding-left: 20px;
+  text-align: left;
+  padding-left: 30px;
 }
 
-.accordion-button-active:hover .accordion-button-text {
-  padding-left: 30px;
+.accordion-button-active:hover .accordion-button-text,
+.accordion-button-active:focus .accordion-button-text
+{
+  padding-left: 35px;
 }
 
 .accordion-button-active:focus {
@@ -1089,12 +1091,10 @@ body {
 
 .accordion-button-text {
   display: block;
-  text-align: left;
   transition: padding-left 0.4s;
 }
 
 .accordion-list {
-  width: 280px;
   padding: 0;
   padding-top: 64px;
   margin: 0;
@@ -1104,6 +1104,7 @@ body {
 }
 
 .accordion-item {
+  width: 280px;
   list-style-type: none;
   margin-bottom: 35px;
   height: 40px;
@@ -1134,7 +1135,11 @@ body {
   opacity: 0.3;
 }
 
-.wrapper-accordion-description {
+.wrapper-accordion-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1;
 }
 
@@ -1144,19 +1149,18 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  margin-top: 72.5px;
+  margin-top: 0;
   margin-bottom: 34px;
 }
 
 .accordion-item-image {
-  margin-top: 72.5px;
+  margin-right: 63px;
   z-index: 1;
 }
 
 .accordion-description-text {
   font-style: normal;
-  width: 452px;
-  margin-right: 106px;
+  width: 480px;
   margin-top: 0;
   margin-bottom: 0;
 }
