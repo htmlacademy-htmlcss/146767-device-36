@@ -260,7 +260,7 @@ body {
 /* Личный кабинет и навигация */
 .navigation-list {
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 }
 
 .account-list,
@@ -945,7 +945,7 @@ body {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
-  top: -30px;
+  top: -37px;
 }
 
 .slider-heading {
@@ -955,8 +955,8 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  margin-top: 90px;
-  margin-bottom: 29px;
+  margin-top: 85px;
+  margin-bottom: 28px;
 }
 
 .slider-text {
@@ -970,7 +970,7 @@ body {
   display: block;
   overflow: hidden;
   width: 100%;
-  height: 120px;
+  height: 112px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Rubik';
@@ -1054,8 +1054,8 @@ body {
 .slider-text-feature-list {
   display: inline-block;
   margin: 0;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  margin-right: 18px;
+  margin-bottom: 18px;
 }
 
 .slider-text-feature-term {
@@ -1075,7 +1075,7 @@ body {
 .wrapper-slider-button {
   position: absolute;
   width: 560px;
-  top: 180px;
+  top: 174px;
   z-index: 1;
 }
 
@@ -1180,7 +1180,7 @@ body {
   column-gap: 40px;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .product-categories-item {
@@ -1235,7 +1235,7 @@ body {
 /* Аккордеон */
 .services {
   position: relative;
-  margin-bottom: 145px;
+  margin-bottom: 143px;
 }
 
 .services::before {
@@ -1501,8 +1501,7 @@ body {
 .contacts
 {
   width: 530px;
-  margin-bottom: 70px;
-  /* padding-top: 47px; */
+  margin-bottom: 72px;
 }
 
 .subscription {
@@ -1518,7 +1517,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   margin-bottom: 48px;
-  margin-top: 47px;
+  margin-top: 48px;
 }
 
 .about-us-text,
@@ -1707,7 +1706,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 133px;
+  margin-bottom: 135px;
 }
 
 .column-subscription-left {
@@ -1719,8 +1718,8 @@ body {
 }
 
 .subscription-text {
-  margin: 10px 0;
-  margin-left: 10px;
+  margin: 8px 0;
+  margin-left: 8px;
 }
 
 .subscription-text-strong {
@@ -1730,7 +1729,7 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  padding-left: 5px;
+  padding-left: 8px;
 }
 
 .subscription-form {
@@ -1751,39 +1750,35 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  width: 557px;
+  width: 543px;
   height: 55px;
   border: none;
   border-bottom: 3px solid #C4C4C4;
   border-right: 0 solid transparent;
   background: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  padding-left: 16px;
   z-index: 1;
 }
 
 .subscription-input::-webkit-input-placeholder {
-  padding-left: 16px;
   opacity: 0.5;
 }
 
 .subscription-input::-moz-placeholder {
-  padding-left: 16px;
   opacity: 0.5;
 }
 
 .subscription-input:-ms-input-placeholder {
-  padding-left: 16px;
   opacity: 0.5;
 }
 
 .subscription-input::-ms-input-placeholder {
-  padding-left: 16px;
   opacity: 0.5;
 }
 
 .subscription-input::placeholder {
-  padding-left: 16px;
   opacity: 0.5;
 }
 
@@ -2099,9 +2094,9 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  margin-top: 40px;
+  margin-top: 36px;
   margin-left: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 /* Навигация "Хлебные крошки" */
@@ -2300,7 +2295,7 @@ body {
 .catalog-filter-group-checkbox,
 .catalog-filter-group-radiobox
 {
-  margin-bottom: 37px;
+  margin-bottom: 38px;
 }
 
 .catalog-filter-legend {
