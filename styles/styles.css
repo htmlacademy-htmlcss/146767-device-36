@@ -260,7 +260,7 @@ body {
 /* Личный кабинет и навигация */
 .navigation-list {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .account-list,
@@ -659,7 +659,7 @@ body {
   margin: 0;
   padding-left: 60px;
   padding-right: 60px;
-  margin-top: 33px;
+  margin-top: 30px;
   padding-bottom: 27px;
   -webkit-transition: height 0.4s, padding-bottom 0.4s;
   -o-transition: height 0.4s, padding-bottom 0.4s;
@@ -881,7 +881,7 @@ body {
 .navigation-item-warranty,
 .navigation-item-contacts
 {
-  margin-left: 48px;
+  margin-left: 44px;
 }
 
 .navigation-link {
@@ -945,7 +945,7 @@ body {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
-  top: -40px;
+  top: -30px;
 }
 
 .slider-heading {
@@ -1009,7 +1009,7 @@ body {
   position: relative;
   display: block;
   padding: 10px 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   width: 220px;
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -1051,26 +1051,31 @@ body {
   opacity: 0.3;
 }
 
-.slider-text-feature,
-.slider-text-feature em
-{
+.slider-text-feature-list {
+  display: inline-block;
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.slider-text-feature-term {
   font-style: normal;
   font-size: 36px;
   line-height: 30px;
+  margin-bottom: 10px;
 }
 
-.slider-text-feature {
+.slider-text-feature-definition {
   font-size: 16px;
   line-height: 30px;
   display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 26px;
+  margin: 0;
 }
 
 .wrapper-slider-button {
   position: absolute;
   width: 560px;
-  top: 30%;
+  top: 180px;
   z-index: 1;
 }
 
@@ -1181,7 +1186,7 @@ body {
 .product-categories-item {
   list-style-type: none;
   width: 160px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
 }
 
@@ -1206,7 +1211,7 @@ body {
 }
 
 .product-categories-img {
-  margin-bottom: 32px;
+  margin-bottom: 23px;
   background-color: #FFE17F;
 }
 
@@ -1230,7 +1235,7 @@ body {
 /* Аккордеон */
 .services {
   position: relative;
-  margin-bottom: 142px;
+  margin-bottom: 145px;
 }
 
 .services::before {
@@ -1281,7 +1286,7 @@ body {
   color: #FFE17F;
   width: 100%;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 18px;
 }
 
 .accordion-button-active:hover .accordion-button-text,
@@ -1495,7 +1500,7 @@ body {
 .about-us,
 .contacts
 {
-  width: 520px;
+  width: 530px;
   margin-bottom: 70px;
   /* padding-top: 47px; */
 }
@@ -1544,7 +1549,7 @@ body {
 
 .about-us-list {
   list-style-type: none;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .about-us-item {
@@ -1595,8 +1600,12 @@ body {
 {
   position: relative;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 10px 22px;
   z-index: 1;
+}
+
+.contacts-link {
+  padding: 10px 32px;
 }
 
 .about-us-link:hover.about-us-link::before,
@@ -1647,7 +1656,7 @@ body {
 }
 
 .contacts-list + .contacts-list {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .contacts-telephone-link,
@@ -1687,7 +1696,7 @@ body {
 
 /* Форма для оформления подписки */
 .wrapper-subscription {
-  padding-top: 64px;
+  padding-top: 68px;
   padding-bottom: 56px;
 }
 
@@ -1698,25 +1707,30 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 144px;
+  margin-bottom: 133px;
 }
 
-.column-subscription-left,
-.column-subscription-right
-{
-  width: 520px;
+.column-subscription-left {
+  width: 400px;
+}
+
+.column-subscription-right {
+  width: 560px;
 }
 
 .subscription-text {
   margin: 10px 0;
+  margin-left: 10px;
 }
 
 .subscription-text-strong {
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+  padding-left: 5px;
 }
 
 .subscription-form {
@@ -1744,28 +1758,32 @@ body {
   border-right: 0 solid transparent;
   background: none;
   padding: 0;
-  padding-left: 16px;
   margin: 0;
   z-index: 1;
 }
 
 .subscription-input::-webkit-input-placeholder {
+  padding-left: 16px;
   opacity: 0.5;
 }
 
 .subscription-input::-moz-placeholder {
+  padding-left: 16px;
   opacity: 0.5;
 }
 
 .subscription-input:-ms-input-placeholder {
+  padding-left: 16px;
   opacity: 0.5;
 }
 
 .subscription-input::-ms-input-placeholder {
+  padding-left: 16px;
   opacity: 0.5;
 }
 
 .subscription-input::placeholder {
+  padding-left: 16px;
   opacity: 0.5;
 }
 
@@ -1858,18 +1876,18 @@ body {
 
 .footer-index-column-central {
   width: 444px;
-  margin-top: 137px;
+  margin-top: 133px;
 }
 
 .footer-index-column-right {
   width: 240px;
-  margin-top: 140px;
+  margin-top: 135px;
   text-align: right;
 }
 
 .footer-link-logo {
   display: inline-block;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .footer-link-logo :hover {
@@ -1916,7 +1934,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 42px;
+  margin-bottom: 48px;
 }
 
 .footer-social {
