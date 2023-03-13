@@ -2099,9 +2099,9 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  margin-top: 35px;
+  margin-top: 40px;
   margin-left: 60px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
 /* Навигация "Хлебные крошки" */
@@ -2109,14 +2109,14 @@ body {
   padding: 0;
   margin: 0;
   margin-left: 60px;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .breadcrumbs-item {
   position: relative;
   display: inline;
   list-style-type: none;
-  margin-right: 36px;
+  margin-right: 32px;
 }
 
 .breadcrumbs-item::before {
@@ -2294,7 +2294,13 @@ body {
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+}
+
+.catalog-filter-group-checkbox,
+.catalog-filter-group-radiobox
+{
+  margin-bottom: 37px;
 }
 
 .catalog-filter-legend {
@@ -2731,8 +2737,8 @@ body {
   padding: 0;
   margin: 0 auto;
   margin-bottom: 44px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .button-preloading {
@@ -2826,7 +2832,7 @@ body {
 
 .pagination-link {
   display: block;
-  padding: 10px 16px;
+  padding: 10px 15px;
   font-size: 16px;
   line-height: 20px;
   color: #444444;
@@ -2857,7 +2863,7 @@ body {
 {
   cursor: pointer;
   display: block;
-  padding: 20px 25px;
+  padding: 20px 22px;
 }
 
 .pagination-prev:hover:not(.pagination-disabled),
@@ -2911,12 +2917,13 @@ body {
 .modal {
   position: relative;
   margin: auto;
-  padding: 72px 80px;
+  padding: 60px 70px;
   background-color: #ffffff;
 }
 
 .modal-delivery {
-  width: 760px;
+  width: 920px;
+  box-sizing: border-box;
   border: 10px solid #000000;
   -webkit-box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -2926,8 +2933,8 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 84px;
-  right: 80px;
+  top: 70px;
+  right: 70px;
   width: 26px;
   height: 26px;
   background-color: transparent;
