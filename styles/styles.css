@@ -260,7 +260,7 @@ body {
 /* Личный кабинет и навигация */
 .navigation-list {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .account-list,
@@ -659,7 +659,7 @@ body {
   margin: 0;
   padding-left: 60px;
   padding-right: 60px;
-  margin-top: 33px;
+  margin-top: 30px;
   padding-bottom: 27px;
   -webkit-transition: height 0.4s, padding-bottom 0.4s;
   -o-transition: height 0.4s, padding-bottom 0.4s;
@@ -881,7 +881,7 @@ body {
 .navigation-item-warranty,
 .navigation-item-contacts
 {
-  margin-left: 48px;
+  margin-left: 44px;
 }
 
 .navigation-link {
@@ -945,7 +945,7 @@ body {
   position: relative;
   -o-object-fit: cover;
      object-fit: cover;
-  top: -40px;
+  top: -37px;
 }
 
 .slider-heading {
@@ -955,8 +955,8 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  margin-top: 90px;
-  margin-bottom: 29px;
+  margin-top: 85px;
+  margin-bottom: 28px;
 }
 
 .slider-text {
@@ -970,7 +970,7 @@ body {
   display: block;
   overflow: hidden;
   width: 100%;
-  height: 120px;
+  height: 112px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Rubik';
@@ -1009,7 +1009,7 @@ body {
   position: relative;
   display: block;
   padding: 10px 0;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   width: 220px;
   text-align: center;
   font-family: 'Raleway', sans-serif;
@@ -1051,26 +1051,31 @@ body {
   opacity: 0.3;
 }
 
-.slider-text-feature,
-.slider-text-feature em
-{
+.slider-text-feature-list {
+  display: inline-block;
+  margin: 0;
+  margin-right: 18px;
+  margin-bottom: 18px;
+}
+
+.slider-text-feature-term {
   font-style: normal;
   font-size: 36px;
   line-height: 30px;
+  margin-bottom: 10px;
 }
 
-.slider-text-feature {
+.slider-text-feature-definition {
   font-size: 16px;
   line-height: 30px;
   display: inline-block;
-  margin-right: 20px;
-  margin-bottom: 26px;
+  margin: 0;
 }
 
 .wrapper-slider-button {
   position: absolute;
   width: 560px;
-  top: 30%;
+  top: 174px;
   z-index: 1;
 }
 
@@ -1169,20 +1174,20 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-	-webkit-box-pack: start;
-	    -ms-flex-pack: start;
-	        justify-content: flex-start;
+	-webkit-box-pack: space-between;
+	    -ms-flex-pack: space-between;
+	        justify-content: space-between;
+  column-gap: 40px;
   padding: 0;
-  margin: 0;
-  margin-bottom: 40px;
+  margin: 0 auto;
+  margin-bottom: 42px;
 }
 
 .product-categories-item {
   list-style-type: none;
   width: 160px;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 30px;
-  margin-right: 40px;
 }
 
 .product-categories-item:nth-child(6n) {
@@ -1206,7 +1211,7 @@ body {
 }
 
 .product-categories-img {
-  margin-bottom: 32px;
+  margin-bottom: 23px;
   background-color: #FFE17F;
 }
 
@@ -1230,7 +1235,7 @@ body {
 /* Аккордеон */
 .services {
   position: relative;
-  margin-bottom: 142px;
+  margin-bottom: 143px;
 }
 
 .services::before {
@@ -1281,7 +1286,7 @@ body {
   color: #FFE17F;
   width: 100%;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 18px;
 }
 
 .accordion-button-active:hover .accordion-button-text,
@@ -1347,6 +1352,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -1493,9 +1500,8 @@ body {
 .about-us,
 .contacts
 {
-  width: 520px;
-  margin-bottom: 70px;
-  /* padding-top: 47px; */
+  width: 530px;
+  margin-bottom: 72px;
 }
 
 .subscription {
@@ -1511,7 +1517,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   margin-bottom: 48px;
-  margin-top: 47px;
+  margin-top: 48px;
 }
 
 .about-us-text,
@@ -1542,7 +1548,7 @@ body {
 
 .about-us-list {
   list-style-type: none;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .about-us-item {
@@ -1593,8 +1599,12 @@ body {
 {
   position: relative;
   text-decoration: none;
-  padding: 10px 30px;
+  padding: 10px 22px;
   z-index: 1;
+}
+
+.contacts-link {
+  padding: 10px 32px;
 }
 
 .about-us-link:hover.about-us-link::before,
@@ -1645,7 +1655,7 @@ body {
 }
 
 .contacts-list + .contacts-list {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .contacts-telephone-link,
@@ -1685,7 +1695,7 @@ body {
 
 /* Форма для оформления подписки */
 .wrapper-subscription {
-  padding-top: 64px;
+  padding-top: 68px;
   padding-bottom: 56px;
 }
 
@@ -1696,31 +1706,38 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 144px;
+  margin-bottom: 135px;
 }
 
-.column-subscription-left,
-.column-subscription-right
-{
-  width: 520px;
+.column-subscription-left {
+  width: 400px;
+}
+
+.column-subscription-right {
+  width: 560px;
 }
 
 .subscription-text {
-  margin: 10px 0;
+  margin: 8px 0;
+  margin-left: 8px;
 }
 
 .subscription-text-strong {
+  display: block;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
+  padding-left: 8px;
 }
 
 .subscription-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   font-size: 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1733,15 +1750,15 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  width: 557px;
+  width: 543px;
   height: 55px;
   border: none;
   border-bottom: 3px solid #C4C4C4;
   border-right: 0 solid transparent;
   background: none;
+  margin: 0;
   padding: 0;
   padding-left: 16px;
-  margin: 0;
   z-index: 1;
 }
 
@@ -1817,6 +1834,7 @@ body {
 .subscription-form-text {
   font-size: 18px;
   position: relative;
+  padding-left: 40px;
   margin-left: auto;
 }
 
@@ -1826,7 +1844,7 @@ body {
   width: 16px;
   height: 16px;
   top: 8px;
-  left: -32px;
+  left: 8px;
   background-image: url(../images/subscription-icon-tick.svg);
   background-repeat: no-repeat;
 }
@@ -1853,18 +1871,18 @@ body {
 
 .footer-index-column-central {
   width: 444px;
-  margin-top: 137px;
+  margin-top: 133px;
 }
 
 .footer-index-column-right {
   width: 240px;
-  margin-top: 140px;
+  margin-top: 135px;
   text-align: right;
 }
 
 .footer-link-logo {
   display: inline-block;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .footer-link-logo :hover {
@@ -1911,7 +1929,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 42px;
+  margin-bottom: 48px;
 }
 
 .footer-social {
@@ -2038,7 +2056,7 @@ body {
 .inner-header,
 .wrapper-main-container
 {
-  width: 1160px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 
@@ -2046,6 +2064,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .inner-catalog {
@@ -2058,11 +2078,13 @@ body {
 
 .wrapper-catalog-filter {
   width: 320px;
+  margin: 0 auto;
   z-index: 0;
 }
 
 .catalog-product {
   width: 840px;
+  margin: 0 auto;
 }
 
 .main-inner-title {
@@ -2072,9 +2094,9 @@ body {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  margin-top: 35px;
+  margin-top: 36px;
   margin-left: 60px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 /* Навигация "Хлебные крошки" */
@@ -2082,14 +2104,14 @@ body {
   padding: 0;
   margin: 0;
   margin-left: 60px;
-  margin-bottom: 34px;
+  margin-bottom: 30px;
 }
 
 .breadcrumbs-item {
   position: relative;
   display: inline;
   list-style-type: none;
-  margin-right: 36px;
+  margin-right: 32px;
 }
 
 .breadcrumbs-item::before {
@@ -2267,7 +2289,13 @@ body {
   border: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
+}
+
+.catalog-filter-group-checkbox,
+.catalog-filter-group-radiobox
+{
+  margin-bottom: 38px;
 }
 
 .catalog-filter-legend {
@@ -2704,8 +2732,8 @@ body {
   padding: 0;
   margin: 0 auto;
   margin-bottom: 44px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .button-preloading {
@@ -2799,7 +2827,7 @@ body {
 
 .pagination-link {
   display: block;
-  padding: 10px 16px;
+  padding: 10px 15px;
   font-size: 16px;
   line-height: 20px;
   color: #444444;
@@ -2830,7 +2858,7 @@ body {
 {
   cursor: pointer;
   display: block;
-  padding: 20px 25px;
+  padding: 20px 22px;
 }
 
 .pagination-prev:hover:not(.pagination-disabled),
@@ -2884,12 +2912,13 @@ body {
 .modal {
   position: relative;
   margin: auto;
-  padding: 72px 80px;
+  padding: 60px 70px;
   background-color: #ffffff;
 }
 
 .modal-delivery {
-  width: 760px;
+  width: 920px;
+  box-sizing: border-box;
   border: 10px solid #000000;
   -webkit-box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -2899,8 +2928,8 @@ body {
 .modal-close-button {
   position: absolute;
   padding: 0;
-  top: 84px;
-  right: 80px;
+  top: 70px;
+  right: 70px;
   width: 26px;
   height: 26px;
   background-color: transparent;
