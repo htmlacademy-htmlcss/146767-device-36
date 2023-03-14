@@ -1831,6 +1831,10 @@ body {
   border-bottom: 3px solid #FF3D3D;
 }
 
+.subscription-input:invalid:placeholder-shown {
+  border-color: #C4C4C4;
+}
+
 .subscription-form-text {
   font-size: 18px;
   position: relative;
@@ -3093,6 +3097,21 @@ body {
 .delivery-input-name:invalid ~ .delivery-input-mail-help-text
 {
   color: #FF3D3D;
+}
+
+.delivery-input-name:invalid:placeholder-shown,
+.delivery-input-mail:invalid:placeholder-shown,
+.delivery-input-order-number:invalid:placeholder-shown
+{
+  position: relative;
+  border: none;
+}
+
+.delivery-input-name:invalid:placeholder-shown ~ .delivery-input-mail-help-text,
+.delivery-input-mail:invalid:placeholder-shown ~ .delivery-input-mail-help-text,
+.delivery-input-order-number:invalid:placeholder-shown
+{
+  color: #000000;
 }
 
 .delivery-input-order-text {
